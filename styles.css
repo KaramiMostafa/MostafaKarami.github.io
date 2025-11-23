@@ -26,18 +26,18 @@ body{
   color:var(--text);
 }
 
-/* ====== Layout (wider left sidebar) ====== */
-.wrap{ padding-left:104px } /* space for bigger left rail */
+/* ====== Layout: big left column ====== */
+.wrap{ padding-left:104px } /* space for big rail */
 .layout{
-  max-width:1200px; margin:0 auto; padding:32px 32px 32px 24px;
-  display:grid; gap:32px; grid-template-columns:420px 1fr;
+  max-width:1300px; margin:0 auto; padding:32px 32px 32px 24px;
+  display:grid; gap:32px; grid-template-columns:460px 1fr;
 }
 @media (max-width:1024px){
   .wrap{ padding-left:0 }
   .layout{ grid-template-columns:1fr; padding:20px; }
 }
 
-/* ====== Left rail (BIG icon menu) ====== */
+/* ====== Left rail: bigger buttons/icons ====== */
 .left-rail{
   position:fixed; top:0; left:0; bottom:0; width:104px;
   background:rgba(10,12,15,.4);
@@ -49,19 +49,19 @@ body{
 @media (max-width:1024px){ .left-rail{ display:none } }
 
 .side-nav{
-  display:grid; gap:12px;
+  display:grid; gap:14px;
 }
 .side-nav a{
-  width:68px; height:68px;
+  width:72px; height:72px;
   display:grid; place-items:center;
-  border-radius:20px;
+  border-radius:22px;
   color:var(--text-dim);
   border:1px solid transparent;
   text-decoration:none;
   transition:transform .15s, background-color .15s, color .15s, border-color .15s;
 }
 .side-nav a svg{
-  width:30px; height:30px;
+  width:32px; height:32px;
   stroke:currentColor;
   fill:none;
 }
@@ -77,44 +77,48 @@ body{
   border-color:transparent;
 }
 
-/* ====== Profile sidebar (BIG full-height card) ====== */
+/* ====== Profile sidebar: big, centered ====== */
 .profile-card{
   position:sticky; top:16px; align-self:start;
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:20px; padding:28px 24px;
+  border-radius:24px; padding:28px 26px 24px;
   box-shadow:var(--shadow);
-  min-height:calc(100vh - 32px);          /* almost full screen vertically */
+  min-height:calc(100vh - 32px);      /* nearly full viewport */
   display:flex; flex-direction:column;
+  align-items:center;                 /* center horizontally */
+  text-align:center;                  /* center text */
 }
 .avatar{
-  display:flex; justify-content:center; margin-bottom:14px;
+  display:flex; justify-content:center; margin-bottom:18px;
 }
 .avatar-img{
-  width:132px; height:132px;
-  border-radius:50%;
+  width:150px; height:150px;
+  border-radius:20px;
   object-fit:cover;
-  box-shadow:0 0 0 4px rgba(124,124,255,0.6);
+  box-shadow:0 0 0 4px rgba(124,124,255,0.65);
 }
 .profile-card h1{
   font-family:"Space Grotesk",Inter,sans-serif;
-  font-size:clamp(1.9rem,2.6vw,2.6rem);
-  margin:4px 0 4px;
+  font-size:clamp(2.1rem,3vw,3rem);
+  margin:4px 0 6px;
 }
 .tagline{
-  margin:0 0 16px;
+  margin:0 0 18px;
   color:var(--text-dim);
-  font-size:1rem;
+  font-size:1.05rem;
+  max-width:100%;
 }
 
-/* icon-only social row (larger buttons) */
+/* big icon row under text */
 .social-icons{
   display:flex;
-  gap:10px;
+  gap:12px;
   margin-bottom:18px;
+  justify-content:center;
 }
 .icon-btn{
-  width:40px; height:40px;
+  width:44px; height:44px;
   border-radius:999px;
   border:1px solid var(--border);
   background:var(--bg-elev);
@@ -124,7 +128,7 @@ body{
   transition:background .15s, transform .15s, color .15s, border-color .15s, box-shadow .15s;
 }
 .icon-btn svg{
-  width:20px; height:20px;
+  width:22px; height:22px;
   stroke:currentColor;
   fill:none;
 }
@@ -136,11 +140,31 @@ body{
   box-shadow:0 0 0 3px rgba(124,124,255,0.45);
 }
 
+/* OPTIONAL: if you later add a big Download CV button */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  font-weight:600;
+  text-decoration:none;
+  color:var(--text);
+  background:var(--bg-elev);
+}
+.btn.primary{
+  background:var(--brand);
+  border-color:transparent;
+  color:#fff;
+}
+.btn.primary:hover{
+  filter:brightness(1.05);
+}
+
 /* mobile section nav */
 .section-nav{ display:none }
 @media (max-width:1024px){
   .section-nav{
-    display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;
   }
   .section-nav a{
     padding:6px 10px;
@@ -163,7 +187,7 @@ body{
 .content .section:last-child{ border-bottom:0 }
 .section h2{
   font-family:"Space Grotesk",Inter,sans-serif;
-  font-size:clamp(1.5rem,2.1vw,2.2rem);
+  font-size:clamp(1.5rem,2.2vw,2.3rem);
   margin:0 0 8px;
 }
 section{ scroll-margin-top:24px }
