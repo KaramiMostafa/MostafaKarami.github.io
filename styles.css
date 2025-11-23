@@ -1,13 +1,13 @@
 :root{
-  --bg: #0b0d10;
-  --bg-elev: #0f1217;
+  --bg: #050712;
+  --bg-elev: #050712;
   --text: #e8ecf1;
   --text-dim: #b8c0cc;
   --brand: #7c7cff;
-  --brand-2: #17d1ff;
-  --card: #12151a;
-  --border: #232833;
-  --shadow: 0 1px 0 rgba(255,255,255,0.02), 0 10px 28px rgba(0,0,0,0.45);
+  --mustard: #f6c547;        /* mustard yellow */
+  --card: #071932;           /* navy-ish card */
+  --border: #243654;
+  --shadow: 0 1px 0 rgba(255,255,255,0.02), 0 10px 28px rgba(0,0,0,0.7);
 }
 
 *{box-sizing:border-box}
@@ -20,8 +20,8 @@ body{
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
   line-height:1.6;
   background:
-    radial-gradient(900px 700px at 0% 0%, rgba(124,124,255,0.08), transparent 60%) no-repeat,
-    radial-gradient(700px 500px at 100% 10%, rgba(23,209,255,0.07), transparent 60%) no-repeat,
+    radial-gradient(900px 700px at 0% 0%, rgba(124,124,255,0.09), transparent 60%) no-repeat,
+    radial-gradient(700px 500px at 100% 10%, rgba(23,209,255,0.06), transparent 60%) no-repeat,
     var(--bg);
   color:var(--text);
 }
@@ -40,9 +40,9 @@ body{
 /* ===== Left rail with big icons ===== */
 .left-rail{
   position:fixed; top:0; left:0; bottom:0; width:104px;
-  background:rgba(10,12,15,.4);
+  background:#02040b;
   backdrop-filter:blur(10px) saturate(150%);
-  border-right:1px solid var(--border);
+  border-right:1px solid #111623;
   display:flex; align-items:center; justify-content:center;
   z-index:20;
 }
@@ -68,22 +68,22 @@ body{
 .side-nav a:hover{
   transform:translateY(-2px);
   color:var(--text);
-  background:var(--card);
-  border-color:var(--border);
+  background:#0a1430;
+  border-color:#18223a;
 }
 .side-nav a.active{
-  color:#fff;
-  background:var(--brand);
+  color:#000;
+  background:var(--mustard);
   border-color:transparent;
 }
 
-/* ===== Left column container ===== */
+/* ===== Left column ===== */
 .left-column{
   display:flex;
   flex-direction:column;
 }
 
-/* ===== Profile card: full height, centered ===== */
+/* ===== Profile card ===== */
 .profile-card{
   position:sticky; top:16px;
   background:var(--card);
@@ -106,12 +106,15 @@ body{
   width:190px; height:190px;
   border-radius:24px;
   object-fit:cover;
-  box-shadow:0 0 0 4px rgba(124,124,255,0.65);
+  box-shadow:0 0 0 4px rgba(246,197,71,0.9); /* mustard ring */
 }
+
+/* NAME = mustard */
 .profile-card h1{
   font-family:"Space Grotesk",Inter,sans-serif;
   font-size:clamp(2.2rem,3.2vw,3.1rem);
   margin:4px 0 6px;
+  color:var(--mustard);
 }
 .tagline{
   margin:0 0 20px;
@@ -129,8 +132,8 @@ body{
 .icon-btn{
   width:52px; height:52px;
   border-radius:999px;
-  border:1px solid var(--border);
-  background:var(--bg-elev);
+  border:1px solid #1f3050;
+  background:#020814;
   display:grid; place-items:center;
   color:var(--text-dim);
   text-decoration:none;
@@ -143,13 +146,13 @@ body{
 }
 .icon-btn:hover{
   transform:translateY(-1px);
-  background:var(--brand);
-  color:#fff;
+  background:var(--mustard);
+  color:#000;
   border-color:transparent;
-  box-shadow:0 0 0 3px rgba(124,124,255,0.45);
+  box-shadow:0 0 0 3px rgba(246,197,71,0.65);
 }
 
-/* cat gif at bottom of card */
+/* cat gif bottom */
 .profile-cat{
   margin-top:auto;
   display:flex;
@@ -160,7 +163,7 @@ body{
   max-width:220px;
   width:100%;
   height:auto;
-  opacity:0.9;
+  image-rendering:auto;
 }
 
 /* mobile section nav */
@@ -178,20 +181,23 @@ body{
     font-size:.85rem;
   }
   .section-nav a.active{
-    background:var(--brand); color:#fff; border-color:transparent;
+    background:var(--mustard); color:#000; border-color:transparent;
   }
 }
 
 /* ===== Content ===== */
 .content .section{
   padding:52px 0;
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid #101727;
 }
 .content .section:last-child{ border-bottom:0 }
+
+/* SECTION TITLES = MUSTARD */
 .section h2{
   font-family:"Space Grotesk",Inter,sans-serif;
   font-size:clamp(1.5rem,2.2vw,2.3rem);
   margin:0 0 8px;
+  color:var(--mustard);
 }
 section{ scroll-margin-top:24px }
 
@@ -201,7 +207,7 @@ section{ scroll-margin-top:24px }
 /* ===== Publications ===== */
 .pub-filters{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 12px }
 .chip{
-  background:var(--bg-elev);
+  background:#0a1020;
   color:var(--text);
   border:1px solid var(--border);
   border-radius:999px;
@@ -210,7 +216,7 @@ section{ scroll-margin-top:24px }
   font-size:.9rem;
 }
 .chip[aria-selected="true"]{
-  outline:2px solid var(--brand);
+  outline:2px solid var(--mustard);
 }
 
 .pub-list{
@@ -221,14 +227,14 @@ section{ scroll-margin-top:24px }
 .pub{
   display:grid; grid-template-columns:1fr auto;
   gap:10px; align-items:center;
-  background:var(--card);
+  background:#050e20;
   border:1px solid var(--border);
   border-radius:12px;
   padding:10px;
 }
 .pub-title{ font-weight:600 }
 .pub-venue{ color:var(--text-dim); display:block; font-size:.9rem }
-.pub-link{ color:var(--brand); text-decoration:none; font-size:.9rem }
+.pub-link{ color:var(--mustard); text-decoration:none; font-size:.9rem }
 @media (max-width:720px){
   .pub{ grid-template-columns:1fr }
 }
@@ -239,7 +245,7 @@ section{ scroll-margin-top:24px }
 @media (max-width:640px){ .project-grid{ grid-template-columns:1fr } }
 
 .project{
-  background:var(--card);
+  background:#050e20;
   border:1px solid var(--border);
   border-radius:16px;
   overflow:hidden;
@@ -250,7 +256,7 @@ section{ scroll-margin-top:24px }
   background:
     radial-gradient(600px 360px at 90% 10%, rgba(23,209,255,0.12), transparent 60%) no-repeat,
     radial-gradient(600px 360px at 10% 90%, rgba(124,124,255,0.12), transparent 60%) no-repeat,
-    #0b0d10;
+    #020814;
 }
 .project-body{ padding:14px }
 .tags{
@@ -271,7 +277,7 @@ section{ scroll-margin-top:24px }
   position:fixed; top:0; left:0;
   width:28px; height:28px;
   margin-left:-14px; margin-top:-14px;
-  border:2px solid var(--brand);
+  border:2px solid var(--mustard);
   border-radius:50%;
   pointer-events:none;
   opacity:0;
@@ -285,7 +291,7 @@ section{ scroll-margin-top:24px }
 }
 #cursor-ring.down{ border-width:3px }
 
-/* ===== Reduced motion: disable cursor ===== */
+/* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce){
   #cursor-ring{ display:none !important; }
 }
