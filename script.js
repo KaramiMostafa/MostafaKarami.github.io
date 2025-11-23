@@ -101,38 +101,3 @@
   document.addEventListener("mousedown", () => ring.classList.add("down"));
   document.addEventListener("mouseup", () => ring.classList.remove("down"));
 })();
-
-// ===== Idle cat assistant (10s inactivity) =====
-(function () {
-  const cat = document.getElementById("cat-helper");
-  if (!cat) return;
-
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) {
-    cat.remove();
-    return;
-  }
-
-  let timer = null;
-  let hasShown = false;
-  const DELAY = 10000; // 10 seconds
-
-  function triggerCat() {
-    if (hasShown) return;
-    hasShown = true;
-    cat.classList.add("show");
-  }
-
-  function resetTimer() {
-    if (hasShown) return;
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(triggerCat, DELAY);
-  }
-
-  ["mousemove", "keydown", "scroll", "touchstart"].forEach((ev) =>
-    window.addEventListener(ev, resetTimer, { passive: true })
-  );
-
-  // start timer on load
-  resetTimer();
-})();
