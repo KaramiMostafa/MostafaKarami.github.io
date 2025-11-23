@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Your Name — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal portfolio: about, publications, projects, and contact.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- LEFT RAIL (icon menu) -->
+  <aside class="left-rail" aria-label="Section navigation">
+    <nav class="side-nav">
+      <a href="#about"        class="tip" data-section="about"        aria-label="About"        title="About">
+        <!-- user icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="3"></circle>
+          <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+        </svg>
+      </a>
+      <a href="#publications" class="tip" data-section="publications" aria-label="Publications" title="Publications">
+        <!-- bookmark/book icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4l-7 4V4a1 1 0 0 1 1-1z"></path>
+        </svg>
+      </a>
+      <a href="#projects"     class="tip" data-section="projects"     aria-label="Projects"     title="Projects">
+        <!-- grid icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3"  y="3"  width="8" height="8" rx="2"></rect>
+          <rect x="13" y="3"  width="8" height="8" rx="2"></rect>
+          <rect x="3"  y="13" width="8" height="8" rx="2"></rect>
+          <rect x="13" y="13" width="8" height="8" rx="2"></rect>
+        </svg>
+      </a>
+      <a href="#contact"      class="tip" data-section="contact"      aria-label="Contact"      title="Contact">
+        <!-- mail icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <path d="M3 7l9 6l9-6"></path>
+        </svg>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- STICKY PROFILE CARD -->
+      <aside class="profile-card" aria-labelledby="name">
+        <div class="avatar">
+          <!-- inline avatar svg (replace with your photo if you want) -->
+          <svg viewBox="0 0 128 128" role="img" aria-label="Avatar">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#7c7cff"/>
+                <stop offset="100%" stop-color="#17d1ff"/>
+              </linearGradient>
+            </defs>
+            <rect width="128" height="128" rx="16" fill="#0b0d10"></rect>
+            <circle cx="64" cy="46" r="24" fill="url(#g)"/>
+            <rect x="28" y="82" width="72" height="30" rx="15" fill="url(#g)" opacity=".8"/>
+          </svg>
+        </div>
+
+        <h1 id="name">Your Name</h1>
+        <p class="tagline">AI / ML • Robustness • Privacy</p>
+
+        <div class="links">
+          <a class="btn primary" href="cv.pdf" download>⬇ Download CV</a>
+          <a class="btn" href="mailto:you@example.com">Email</a>
+          <a class="btn outline" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <!-- Mobile/Small-screen section shortcuts (visible when left rail hides) -->
+        <nav class="section-nav m-section-nav" aria-label="Sections">
+          <a href="#about"        data-section="about">About</a>
+          <a href="#publications" data-section="publications">Publications</a>
+          <a href="#projects"     data-section="projects">Projects</a>
+          <a href="#contact"      data-section="contact">Contact</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="content">
+        <section id="about" class="section">
+          <h2>About</h2>
+          <p>
+            Short intro about you — what you’re working on, research interests, and where you’re based.
+            Replace this with your text. This section sets the tone and stays concise.
+          </p>
+          <ul class="facts">
+            <li>Role @ Organization (20XX–present)</li>
+            <li>Previously: Role @ Org</li>
+            <li>Focus: LLMs, Multimodal, Robustness, Privacy</li>
+          </ul>
+        </section>
+
+        <section id="publications" class="section">
+          <h2>Publications</h2>
+
+          <div class="pub-filters" role="tablist" aria-label="Filter by year">
+            <button class="chip" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2025">2025</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2024">2024</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2023">2023</button>
+          </div>
+
+          <ol id="pub-list" class="pub-list">
+            <li class="pub" data-year="2025">
+              <span class="pub-title">Robust Reasoning Under Distribution Shift</span>
+              <span class="pub-venue">ICML 2025</span>
+              <a class="pub-link" href="#" target="_blank" rel="noopener">PDF</a>
+              <a class="pub-link" href="#" target="_blank" rel="noopener">Code</a>
+            </li>
+            <li class="pub" data-year="2024">
+              <span class="pub-title">Defending Vision-Language Models</span>
+              <span class="pub-venue">NeurIPS 2024</span>
+              <a class="pub-link" href="#" target="_blank" rel="noopener">PDF</a>
+              <a class="pub-link" href="#" target="_blank" rel="noopener">Project</a>
+            </li>
+            <li class="pub" data-year="2023">
+              <span class="pub-title">Fast & Private LLM Inference</span>
+              <span class="pub-venue">ACL 2023</span>
+              <a class="pub-link" href="#" target="_blank" rel="noopener">PDF</a>
+              <a class="pub-link" href="#" target="_blank" rel="noopener">Code</a>
+            </li>
+          </ol>
+        </section>
+
+        <section id="projects" class="section">
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <article class="project">
+              <div class="project-media"></div>
+              <div class="project-body">
+                <h3>Project One</h3>
+                <p>What it is and why it matters.</p>
+                <ul class="tags"><li>Python</li><li>ML</li><li>Infra</li></ul>
+                <div class="actions">
+                  <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                  <a class="btn small outline" href="#" target="_blank" rel="noopener">Source</a>
+                </div>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-media"></div>
+              <div class="project-body">
+                <h3>Project Two</h3>
+                <p>Short one-liner about the project.</p>
+                <ul class="tags"><li>TypeScript</li><li>Next.js</li><li>RAG</li></ul>
+                <div class="actions">
+                  <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                  <a class="btn small outline" href="#" target="_blank" rel="noopener">Source</a>
+                </div>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-media"></div>
+              <div class="project-body">
+                <h3>Project Three</h3>
+                <p>A sentence that highlights impact.</p>
+                <ul class="tags"><li>Go</li><li>Backend</li><li>Infra</li></ul>
+                <div class="actions">
+                  <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                  <a class="btn small outline" href="#" target="_blank" rel="noopener">Source</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <h2>Contact</h2>
+          <p>For collaborations or questions, reach out:</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+            <li><strong>Location:</strong> City, Country</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- custom cursor ring -->
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+</body>
+</html>
