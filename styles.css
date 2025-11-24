@@ -126,7 +126,7 @@ body::after{
   transform:translateX(-6px);
 }
 
-/* ===== Left column container ===== */
+/* profile card sticky */
 .left-column{
   display:flex;
   flex-direction:column;
@@ -359,6 +359,11 @@ section{ scroll-margin-top:24px }
   border-radius:10px;
   padding:8px 10px;
   font-size:.95rem;
+}
+
+.pub-year{
+  color:var(--mustard);
+  font-weight:600;
 }
 
 /* ===== Projects ===== */

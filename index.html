@@ -22,7 +22,6 @@
       <!-- About -->
       <a href="#about" class="nav-item" data-section="about">
         <div class="nav-icon">
-          <!-- user icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="8" r="3"></circle>
@@ -35,7 +34,6 @@
       <!-- Education -->
       <a href="#education" class="nav-item" data-section="education">
         <div class="nav-icon">
-          <!-- cap icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
@@ -48,7 +46,6 @@
       <!-- Experience -->
       <a href="#experience" class="nav-item" data-section="experience">
         <div class="nav-icon">
-          <!-- briefcase -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="7" width="20" height="14" rx="2"></rect>
@@ -61,7 +58,7 @@
       <!-- Publications -->
       <a href="#publications" class="nav-item" data-section="publications">
         <div class="nav-icon">
-          <!-- document icon (your “papers” symbol) -->
+          <!-- document icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="5" y="3" width="12" height="18" rx="1.5"></rect>
@@ -79,17 +76,14 @@
           <!-- lightbulb + gears -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <!-- bulb -->
             <path d="M12 3a6 6 0 0 0-4 10.4V16h8v-2.6A6 6 0 0 0 12 3z"></path>
             <path d="M10 21h4"></path>
             <path d="M9.5 18h5"></path>
-            <!-- small rear gear -->
             <circle cx="5" cy="6" r="1.7"></circle>
             <path d="M5 3.8v1"></path>
             <path d="M5 8.2v1"></path>
             <path d="M2.8 6H3.8"></path>
             <path d="M6.2 6H7.2"></path>
-            <!-- front gear -->
             <circle cx="19" cy="6" r="2.2"></circle>
             <path d="M19 3.8V2.5"></path>
             <path d="M19 9.5V8.2"></path>
@@ -131,9 +125,9 @@
   <div class="wrap">
     <div class="layout">
 
-      <!-- LEFT COLUMN: profile + cat (sticky) -->
+      <!-- LEFT COLUMN: sticky profile + cat -->
       <div class="left-column">
-        <aside class="profile-card section-card" aria-labelledby="name">
+        <aside class="profile-card" aria-labelledby="name">
           <div class="profile-main">
             <div class="avatar">
               <img src="pics/profile_pic.jpg" alt="Mostafa Karami" class="avatar-img">
@@ -145,7 +139,7 @@
               University of Connecticut
             </p>
 
-            <!-- Contact info here (no phone) -->
+            <!-- Contact under photo (no phone) -->
             <ul class="profile-contact">
               <li>371 Fairfield Way, Room 229, Storrs, CT 06268, USA</li>
               <li><a href="mailto:Mostafa.Karami@uconn.edu">Mostafa.Karami@uconn.edu</a></li>
@@ -262,7 +256,6 @@
           <h2>Publications</h2>
           <p class="pub-legend">Selected peer-reviewed publications and submissions.</p>
 
-          <!-- Simple: year + title only (no tags, no links) -->
           <div class="pub-filters" role="tablist" aria-label="Filter by year">
             <button class="chip" role="tab" aria-selected="true"  data-filter="all">All</button>
             <button class="chip" role="tab" aria-selected="false" data-filter="2025">2025</button>
@@ -272,21 +265,59 @@
             <button class="chip" role="tab" aria-selected="false" data-filter="2018">2018</button>
           </div>
 
+          <!-- Newest → oldest, year highlighted -->
           <ul id="pub-list" class="pub-list-simple">
-            <li class="pub" data-year="2025">2025 — Robust Training with Data Augmentation for Medical Imaging Classification.</li>
-            <li class="pub" data-year="2025">2025 — Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.</li>
-            <li class="pub" data-year="2025">2025 — Segmentation for Early Tumor Detection in Mammograms via Temporal Discrepancy Analysis and Dynamic Loss Weighting.</li>
-            <li class="pub" data-year="2025">2025 — Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.</li>
-            <li class="pub" data-year="2024">2024 — Multi-modal Spatial Clustering for Spatial Transcriptomics Utilizing High-Resolution Histology Images.</li>
-            <li class="pub" data-year="2024">2024 — DCCNV: Enhanced CNV Detection in Single-Cell Sequencing Using Diffusion Process and Contrastive Learning.</li>
-            <li class="pub" data-year="2024">2024 — CAPTURE: A Clustered Adaptive Patchwork Technique for Unified Registration Enhancement in Biological Imaging.</li>
-            <li class="pub" data-year="2023">2023 — Exploring the Relationship Between Air Pollution and CNS Disease Mortality in Italy: A Forecasting Study with ARIMA and XGBoost.</li>
-            <li class="pub" data-year="2023">2023 — Enhanced LSTM by Attention Mechanism for Early Detection of Parkinson’s Disease Through Voice Signals.</li>
-            <li class="pub" data-year="2022">2022 — Analyzing the Network System Performance Based on the Queuing Theory Concept.</li>
-            <li class="pub" data-year="2022">2022 — Multicast Optimization: Operational Research Theory and Applications.</li>
-            <li class="pub" data-year="2022">2022 — Machine Learning Algorithms for Radiogenomics: Application to Prediction of the MGMT Promoter Methylation Status in mpMRI Scans.</li>
-            <li class="pub" data-year="2018">2018 — Spam Detection from Big Data Based on Evolutionary Data Mining Systems.</li>
-            <li class="pub" data-year="2025">2025 — ImageReg: Modular, Open-Source Toolkit for Image Registration and Alignment.</li>
+            <!-- 2025 -->
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — Robust Training with Data Augmentation for Medical Imaging Classification.
+            </li>
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.
+            </li>
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — Segmentation for Early Tumor Detection in Mammograms via Temporal Discrepancy Analysis and Dynamic Loss Weighting.
+            </li>
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.
+            </li>
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — ImageReg: Modular, Open-Source Toolkit for Image Registration and Alignment.
+            </li>
+
+            <!-- 2024 -->
+            <li class="pub" data-year="2024">
+              <span class="pub-year">2024</span> — Multi-modal Spatial Clustering for Spatial Transcriptomics Utilizing High-Resolution Histology Images.
+            </li>
+            <li class="pub" data-year="2024">
+              <span class="pub-year">2024</span> — DCCNV: Enhanced CNV Detection in Single-Cell Sequencing Using Diffusion Process and Contrastive Learning.
+            </li>
+            <li class="pub" data-year="2024">
+              <span class="pub-year">2024</span> — CAPTURE: A Clustered Adaptive Patchwork Technique for Unified Registration Enhancement in Biological Imaging.
+            </li>
+
+            <!-- 2023 -->
+            <li class="pub" data-year="2023">
+              <span class="pub-year">2023</span> — Exploring the Relationship Between Air Pollution and CNS Disease Mortality in Italy: A Forecasting Study with ARIMA and XGBoost.
+            </li>
+            <li class="pub" data-year="2023">
+              <span class="pub-year">2023</span> — Enhanced LSTM by Attention Mechanism for Early Detection of Parkinson’s Disease Through Voice Signals.
+            </li>
+
+            <!-- 2022 -->
+            <li class="pub" data-year="2022">
+              <span class="pub-year">2022</span> — Analyzing the Network System Performance Based on the Queuing Theory Concept.
+            </li>
+            <li class="pub" data-year="2022">
+              <span class="pub-year">2022</span> — Multicast Optimization: Operational Research Theory and Applications.
+            </li>
+            <li class="pub" data-year="2022">
+              <span class="pub-year">2022</span> — Machine Learning Algorithms for Radiogenomics: Application to Prediction of the MGMT Promoter Methylation Status in mpMRI Scans.
+            </li>
+
+            <!-- 2018 -->
+            <li class="pub" data-year="2018">
+              <span class="pub-year">2018</span> — Spam Detection from Big Data Based on Evolutionary Data Mining Systems.
+            </li>
           </ul>
         </section>
 
