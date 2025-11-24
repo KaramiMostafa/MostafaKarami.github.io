@@ -1,4 +1,4 @@
-// ===== Publication filter (by year) =====
+// ===== Publication filter by year =====
 (function () {
   const list = document.getElementById("pub-list");
   const buttons = document.querySelectorAll(".pub-filters [data-filter]");
@@ -22,18 +22,22 @@
   const sections = Array.from(document.querySelectorAll("main .section[id]"));
   if (!sections.length) return;
 
-  const railLinks = Array.from(
-    document.querySelectorAll(".side-nav a[data-section]")
+  const navItems = Array.from(
+    document.querySelectorAll(".side-nav .nav-item[data-section]")
   );
-  const mobLinks = Array.from(
+  const mobileLinks = Array.from(
     document.querySelectorAll(".m-section-nav a[data-section]")
   );
 
   const setActive = (id) => {
-    [...railLinks, ...mobLinks].forEach((a) => {
+    navItems.forEach((a) => {
       const on = a.dataset.section === id;
       a.classList.toggle("active", on);
-      a.setAttribute("aria-current", on ? "true" : "false");
+      a.setAttribute("aria-current", on ? "page" : "false");
+    });
+    mobileLinks.forEach((a) => {
+      const on = a.dataset.section === id;
+      a.classList.toggle("active", on);
     });
   };
 
@@ -47,6 +51,43 @@
   );
 
   sections.forEach((s) => obs.observe(s));
+})();
+
+// ===== Scroll reveal animation for cards =====
+(function () {
+  const cards = document.querySelectorAll(".section-card");
+  if (!cards.length) return;
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  cards.forEach((c) => obs.observe(c));
+})();
+
+// ===== Back-to-top button show/hide =====
+(function () {
+  const btn = document.querySelector(".scroll-top");
+  if (!btn) return;
+
+  const toggle = () => {
+    if (window.scrollY > 250) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  };
+
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
 })();
 
 // ===== Custom cursor ring =====

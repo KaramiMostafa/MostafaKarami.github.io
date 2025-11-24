@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
-<body>
+<body id="top">
 
   <!-- LEFT RAIL (section navigation icons) -->
   <aside class="left-rail" aria-label="Section navigation">
@@ -139,7 +139,7 @@
 
       <!-- LEFT COLUMN: profile + cat -->
       <div class="left-column">
-        <aside class="profile-card" aria-labelledby="name">
+        <aside class="profile-card section-card" aria-labelledby="name">
           <div class="profile-main">
             <div class="avatar">
               <img src="pics/profile_pic.jpg" alt="Mostafa Karami" class="avatar-img">
@@ -178,7 +178,7 @@
               </a>
             </div>
 
-            <!-- Download CV icon button (downloads CV/CV_Karami_2025.pdf) -->
+            <!-- Download CV button (downloads CV/CV_Karami_2025.pdf) -->
             <a class="btn primary cv-btn" href="CV/CV_Karami_2025.pdf" download="Mostafa_Karami_CV_2025">
               <span class="btn-icon">⬇</span>
               <span>Download CV</span>
@@ -209,7 +209,7 @@
       <!-- RIGHT COLUMN: main content -->
       <main class="content">
 
-        <section id="about" class="section">
+        <section id="about" class="section section-card">
           <h2>About</h2>
           <p>
             I’m a Ph.D. student in Computer Science &amp; Engineering at the University of Connecticut.
@@ -223,7 +223,7 @@
           </ul>
         </section>
 
-        <section id="education" class="section">
+        <section id="education" class="section section-card">
           <h2>Education</h2>
           <ul class="facts">
             <li><strong>Ph.D., Computer Science &amp; Engineering</strong> — University of Connecticut, USA (2023–)</li>
@@ -232,7 +232,7 @@
           </ul>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section section-card">
           <h2>Research Experience</h2>
           <h3>Graduate Research Assistant — UConn</h3>
           <ul class="facts">
@@ -249,7 +249,7 @@
           </ul>
         </section>
 
-        <section id="publications" class="section">
+        <section id="publications" class="section section-card">
           <h2>Publications</h2>
 
           <div class="pub-filters" role="tablist" aria-label="Filter by year">
@@ -276,7 +276,7 @@
           </ol>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section section-card">
           <h2>Projects</h2>
           <div class="project-grid">
             <article class="project">
@@ -298,7 +298,7 @@
           </div>
         </section>
 
-        <section id="talks" class="section">
+        <section id="talks" class="section section-card">
           <h2>Talks</h2>
           <ul class="facts">
             <li>Longitudinal Tumor Generation in Mammograms — ACM BCB 2025.</li>
@@ -307,7 +307,7 @@
           </ul>
         </section>
 
-        <section id="awards" class="section">
+        <section id="awards" class="section section-card">
           <h2>Awards</h2>
           <ul class="facts">
             <li>Predoctoral Fellowship — UConn (2025)</li>
@@ -316,13 +316,13 @@
           </ul>
         </section>
 
-        <section id="service" class="section">
+        <section id="service" class="section section-card">
           <h2>Academic Service</h2>
           <p><strong>PC:</strong> SAFE 2026, Ex-ASE 2025.</p>
           <p><strong>Reviewer:</strong> IEEE BIBM, IJCNN, Sci-K, BMC Medical Imaging.</p>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section section-card">
           <h2>Skills</h2>
           <ul class="facts">
             <li><strong>Programming:</strong> Python, C/C++, MATLAB, JS, R, SQL.</li>
@@ -331,20 +331,48 @@
           </ul>
         </section>
 
-        <section id="contact" class="section">
-          <h2>Contact</h2>
-          <ul class="facts">
-            <li><strong>Email:</strong> <a href="mailto:Mostafa.Karami@uconn.edu">Mostafa.Karami@uconn.edu</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/MostafaKarami" target="_blank" rel="noopener">github.com/MostafaKarami</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/KaramiMostafa" target="_blank" rel="noopener">linkedin.com/in/KaramiMostafa</a></li>
-          </ul>
+        <!-- CONTACT SECTION with glass form -->
+        <section id="contact" class="section section-card contact-card">
+          <h2>Let’s Work Together</h2>
+          <p class="contact-subtitle">Have a project, idea, or collaboration in mind?</p>
+
+          <form class="contact-form" method="post" action="#">
+            <div class="contact-row">
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="name" required>
+              </label>
+              <label>
+                <span>Email Address</span>
+                <input type="email" name="email" required>
+              </label>
+            </div>
+            <div class="contact-row">
+              <label>
+                <span>Subject</span>
+                <input type="text" name="subject" required>
+              </label>
+            </div>
+            <label class="contact-message">
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn primary contact-btn" type="submit">
+              <span class="btn-icon">✉</span>
+              <span>Send</span>
+            </button>
+            <p class="contact-note">Form is static right now — hook it up to Formspree, Netlify Forms, or your own backend.</p>
+          </form>
         </section>
 
       </main>
     </div>
   </div>
 
-  <!-- custom cursor ring (script.js handles this) -->
+  <!-- Back-to-top arrow -->
+  <a href="#top" class="scroll-top" aria-label="Back to top">↑</a>
+
+  <!-- custom cursor ring (script.js handles it) -->
   <div id="cursor-ring" aria-hidden="true"></div>
 
 </body>
