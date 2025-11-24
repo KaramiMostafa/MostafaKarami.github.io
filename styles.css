@@ -150,8 +150,10 @@ body::after{
   transform:none;
 }
 
-/* ===== Profile card ===== */
+/* ===== Profile card (STICKY) ===== */
 .profile-card{
+  position:sticky;
+  top:16px;
   background:var(--card-bg);
   border:1px solid var(--card-border);
   min-height:calc(100vh - 32px);
@@ -325,52 +327,38 @@ section{ scroll-margin-top:24px }
   color:var(--text-dim);
 }
 
-/* ===== Publications ===== */
+/* ===== Publications (simple: year + title) ===== */
 .pub-legend{
   margin:0 0 10px;
   font-size:.85rem;
   color:var(--text-dim);
 }
-.pub-list{
+.pub-filters{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 12px }
+.chip{
+  background:#0a1020;
+  color:var(--text);
+  border:1px solid rgba(43,61,100,0.9);
+  border-radius:999px;
+  padding:6px 12px;
+  cursor:pointer;
+  font-size:.9rem;
+}
+.chip[aria-selected="true"]{
+  outline:2px solid var(--mustard);
+}
+.pub-list-simple{
   list-style:none;
   padding:0;
-  display:grid; gap:10px;
-}
-.pub{
+  margin:0;
   display:grid;
-  grid-template-columns: auto 1fr auto;
-  gap:10px;
-  align-items:flex-start;
+  gap:8px;
+}
+.pub-list-simple .pub{
   background:#050e20;
   border:1px solid rgba(36,54,84,0.9);
-  border-radius:12px;
-  padding:10px 12px;
-}
-.pub-tag{
-  font-weight:700;
-  color:var(--mustard);
-  font-size:.9rem;
-}
-.pub-title{
-  font-weight:600;
-  display:block;
-}
-.pub-authors{
-  display:block;
-  font-size:.9rem;
-}
-.pub-venue{
-  display:block;
-  font-size:.85rem;
-  color:var(--text-dim);
-}
-.pub-link{
-  color:var(--mustard);
-  text-decoration:none;
-  font-size:.85rem;
-}
-@media (max-width:720px){
-  .pub{ grid-template-columns: auto 1fr }
+  border-radius:10px;
+  padding:8px 10px;
+  font-size:.95rem;
 }
 
 /* ===== Projects ===== */
@@ -481,7 +469,7 @@ section{ scroll-margin-top:24px }
 /* ===== Custom cursor ring ===== */
 #cursor-ring{
   position:fixed; top:0; left:0;
-  width:28px; height:28px;
+  width:28px; height:28;
   margin-left:-14px; margin-top:-14px;
   border:2px solid var(--mustard);
   border-radius:50%;

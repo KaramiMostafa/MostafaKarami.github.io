@@ -7,6 +7,8 @@
   <meta name="description"
         content="Mostafa Karami — Ph.D. student in Computer Science &amp; Engineering at the University of Connecticut. Research in biomedical imaging, machine learning, robustness, and privacy.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="pics/mk-icon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -59,7 +61,7 @@
       <!-- Publications -->
       <a href="#publications" class="nav-item" data-section="publications">
         <div class="nav-icon">
-          <!-- document icon -->
+          <!-- document icon (your “papers” symbol) -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="5" y="3" width="12" height="18" rx="1.5"></rect>
@@ -81,18 +83,18 @@
             <path d="M12 3a6 6 0 0 0-4 10.4V16h8v-2.6A6 6 0 0 0 12 3z"></path>
             <path d="M10 21h4"></path>
             <path d="M9.5 18h5"></path>
-            <!-- rear gear -->
-            <circle cx="5" cy="6" r="2"></circle>
-            <path d="M5 2.8v1.2"></path>
-            <path d="M5 8.8V10"></path>
-            <path d="M2.8 6H4"></path>
-            <path d="M6 6h1.2"></path>
+            <!-- small rear gear -->
+            <circle cx="5" cy="6" r="1.7"></circle>
+            <path d="M5 3.8v1"></path>
+            <path d="M5 8.2v1"></path>
+            <path d="M2.8 6H3.8"></path>
+            <path d="M6.2 6H7.2"></path>
             <!-- front gear -->
-            <circle cx="19" cy="6" r="2.3"></circle>
-            <path d="M19 3.2V2"></path>
-            <path d="M19 10v-1.2"></path>
-            <path d="M16.2 6H15"></path>
-            <path d="M23 6h-1.2"></path>
+            <circle cx="19" cy="6" r="2.2"></circle>
+            <path d="M19 3.8V2.5"></path>
+            <path d="M19 9.5V8.2"></path>
+            <path d="M16.8 6H15.5"></path>
+            <path d="M22.5 6H21.2"></path>
           </svg>
         </div>
         <span class="nav-label">Projects</span>
@@ -129,7 +131,7 @@
   <div class="wrap">
     <div class="layout">
 
-      <!-- LEFT COLUMN: profile + cat -->
+      <!-- LEFT COLUMN: profile + cat (sticky) -->
       <div class="left-column">
         <aside class="profile-card section-card" aria-labelledby="name">
           <div class="profile-main">
@@ -143,10 +145,9 @@
               University of Connecticut
             </p>
 
-            <!-- moved contact info here -->
+            <!-- Contact info here (no phone) -->
             <ul class="profile-contact">
               <li>371 Fairfield Way, Room 229, Storrs, CT 06268, USA</li>
-              <li>+1 (959) 208 0722</li>
               <li><a href="mailto:Mostafa.Karami@uconn.edu">Mostafa.Karami@uconn.edu</a></li>
             </ul>
 
@@ -209,8 +210,8 @@
           <h2>About</h2>
           <p>
             I’m a Ph.D. student in Computer Science &amp; Engineering at the University of Connecticut.
-            My work focuses on 3D breast tomosynthesis and microscopic images, with methods for cell tracking,
-            feature-based registration, and robust machine learning under distribution shift.
+            My work focuses on 3D digital breast tomosynthesis and microscopic images, with methods for cell tracking,
+            feature-based registration, and robust ML for noisy, distribution-shifted biomedical data.
           </p>
         </section>
 
@@ -230,9 +231,9 @@
             <h3>Graduate Research Assistant — University of Connecticut</h3>
             <p class="exp-meta">Storrs, CT, USA · 2023&nbsp;–&nbsp;Present</p>
             <ul class="facts">
-              <li>Designing a Bayesian Transformer and higher-order graph matching pipeline for tracking cells in serial tissue sections, enabling more accurate 3D reconstructions for ultraplex imaging.</li>
-              <li>Developing CAPTURE and ImageReg — feature-based registration frameworks that combine SIFT/SURF-style keypoints with ResNet50 embeddings for distortion analysis and robust alignment of large-scale biological images.</li>
-              <li>Building registration and tracking codebases with reproducible evaluation pipelines, supporting uncertainty estimation and integration into downstream quantitative analyses.</li>
+              <li>Designing a Bayesian Transformer + higher-order graph matching pipeline for cell tracking in serial tissue sections, supporting accurate 3D reconstructions for ultraplex imaging.</li>
+              <li>Developing CAPTURE and ImageReg — feature-based registration frameworks that combine SIFT/SURF-style keypoints with ResNet50 embeddings to analyze distortion and robustly align large biological image stacks.</li>
+              <li>Building reproducible evaluation pipelines, emphasizing uncertainty estimates, efficient GPU pipelines, and integration into downstream spatial analysis workflows.</li>
             </ul>
           </div>
 
@@ -240,9 +241,9 @@
             <h3>Research Assistant — University of Cologne</h3>
             <p class="exp-meta">Cologne, Germany · 2022&nbsp;–&nbsp;2023</p>
             <ul class="facts">
-              <li>Applied machine learning to radiomic MRI features to predict MGMT promoter methylation in glioblastoma patients, leveraging 1153 features extracted with Pyradiomics (including LoG and wavelet-filtered descriptors).</li>
-              <li>Used XGBoost for feature selection and trained LR, SVM, and MLP classifiers with nested cross-validation across FLAIR, T1w, T1Gd, and T2 sequences.</li>
-              <li>Managed data processing, documentation, and GitHub repositories to ensure reproducible end-to-end pipelines for radiogenomics studies.</li>
+              <li>Applied ML to radiomic MRI features to predict MGMT promoter methylation in glioblastoma, using 1153 Pyradiomics descriptors (including LoG and wavelet features).</li>
+              <li>Used XGBoost for feature selection and trained LR, SVM, and MLP models with nested cross-validation across FLAIR, T1w, T1Gd, and T2 sequences.</li>
+              <li>Managed end-to-end pipelines (data curation, preprocessing, documentation, GitHub) to ensure reproducible radiogenomics experiments.</li>
             </ul>
           </div>
 
@@ -250,127 +251,43 @@
             <h3>Graduate Research Assistant — Politecnico di Torino</h3>
             <p class="exp-meta">Turin, Italy · 2021&nbsp;–&nbsp;2022</p>
             <ul class="facts">
-              <li>Modeled the relationship between air-pollution exposure (PM measures) and CNS disease mortality (Alzheimer’s and Parkinson’s) using regression and time-series forecasting.</li>
-              <li>Processed large-scale environmental and epidemiological datasets, building data-driven models to quantify risk at regional scales.</li>
-              <li>Implemented interactive dashboards to visualize spatiotemporal trends and communicate findings to clinical and public-health collaborators.</li>
+              <li>Modeled relationships between particulate matter exposure and CNS disease mortality (Alzheimer’s, Parkinson’s) using regression and time-series forecasting.</li>
+              <li>Processed large environmental and epidemiological datasets to estimate region-level risk and identify spatiotemporal patterns.</li>
+              <li>Developed interactive dashboards that expose model outputs to clinical and public-health collaborators.</li>
             </ul>
           </div>
         </section>
 
         <section id="publications" class="section section-card">
           <h2>Publications</h2>
-          <p class="pub-legend"><strong>Legend:</strong> C = Conference, J = Journal, W = Workshop, S = In submission, T = Thesis</p>
+          <p class="pub-legend">Selected peer-reviewed publications and submissions.</p>
 
-          <ol id="pub-list" class="pub-list">
-            <li class="pub" data-year="2025">
-              <span class="pub-tag">[W.1]</span>
-              <span class="pub-title">Robust Training with Data Augmentation for Medical Imaging Classification.</span>
-              <span class="pub-authors">J. Martínez-Martínez, O. Brown, <strong>M. Karami</strong>, S. Nabavi.</span>
-              <span class="pub-venue">International Workshop on Health Intelligence (W3PHIAI-25), AAAI-25, 2025.</span>
-              <a class="pub-link" href="https://aaai.org/conference/aaai/aaai-25/workshop-list/#ws49" target="_blank" rel="noopener">Link</a>
-            </li>
+          <!-- Simple: year + title only (no tags, no links) -->
+          <div class="pub-filters" role="tablist" aria-label="Filter by year">
+            <button class="chip" role="tab" aria-selected="true"  data-filter="all">All</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2025">2025</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2024">2024</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2023">2023</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2022">2022</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2018">2018</button>
+          </div>
 
-            <li class="pub" data-year="2025">
-              <span class="pub-tag">[C.10]</span>
-              <span class="pub-title">Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.</span>
-              <span class="pub-authors">A. A. Jeny, S. Hamzehei, <strong>M. Karami</strong>, S. A. Baker, T. Van Rathe, C. Yang, S. Nabavi.</span>
-              <span class="pub-venue">ACM BCB 2025.</span>
-            </li>
-
-            <li class="pub" data-year="2025">
-              <span class="pub-tag">[C.9]</span>
-              <span class="pub-title">Segmentation for Early Tumor Detection in Mammograms via Temporal Discrepancy Analysis and Dynamic Loss Weighting.</span>
-              <span class="pub-authors">A. A. Jeny, S. Hamzehei, <strong>M. Karami</strong>, S. A. Baker, T. V. Rathe, C. Yang, S. Nabavi.</span>
-              <span class="pub-venue">IEEE ICIP 2025.</span>
-            </li>
-
-            <li class="pub" data-year="2025">
-              <span class="pub-tag">[C.8]</span>
-              <span class="pub-title">Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.</span>
-              <span class="pub-authors"><strong>M. Karami</strong>, S. Hamzehei, D. Arce, G. Raimondi, L. Ostroff, S. Nabavi.</span>
-              <span class="pub-venue">MICCAI 2025.</span>
-              <a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-032-05162-2_9" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2024">
-              <span class="pub-tag">[C.7]</span>
-              <span class="pub-title">Multi-modal Spatial Clustering for Spatial Transcriptomics Utilizing High-Resolution Histology Images.</span>
-              <span class="pub-authors">B. Li, <strong>M. Karami</strong>, M. S. Junayed, S. Nabavi.</span>
-              <span class="pub-venue">IEEE BIBM 2024.</span>
-              <a class="pub-link" href="https://www.computer.org/csdl/proceedings-article/bibm/2024/10822051/23onB1ALFZK" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2024">
-              <span class="pub-tag">[C.6]</span>
-              <span class="pub-title">DCCNV: Enhanced CNV Detection in Single-Cell Sequencing Using Diffusion Process and Contrastive Learning.</span>
-              <span class="pub-authors"><strong>M. Karami</strong>, B. Li, S. Weiner, S. Hamzehei, S. Nabavi.</span>
-              <span class="pub-venue">ACM BCB 2024.</span>
-              <a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3698587.3701395" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2024">
-              <span class="pub-tag">[C.5]</span>
-              <span class="pub-title">CAPTURE: A Clustered Adaptive Patchwork Technique for Unified Registration Enhancement in Biological Imaging.</span>
-              <span class="pub-authors">S. Hamzehei, G. Raimondi, <strong>M. Karami</strong>, L. Ostroff, S. Nabavi.</span>
-              <span class="pub-venue">ACM BCB 2024.</span>
-              <a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3698587.3701369" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2023">
-              <span class="pub-tag">[C.4]</span>
-              <span class="pub-title">Exploring the Relationship Between Air Pollution and CNS Disease Mortality in Italy: A Forecasting Study with ARIMA and XGBoost.</span>
-              <span class="pub-authors"><strong>M. Karami</strong>, S. Hamzehei, F. Rastegari, O. Akbarzadeh.</span>
-              <span class="pub-venue">CSCE 2023.</span>
-              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10487237" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2023">
-              <span class="pub-tag">[C.3]</span>
-              <span class="pub-title">Enhanced LSTM by Attention Mechanism for Early Detection of Parkinson’s Disease Through Voice Signals.</span>
-              <span class="pub-authors">A. Mohammadigilani, H. Attar, H. E. Chimeh, <strong>M. Karami</strong>.</span>
-              <span class="pub-venue">EICEEAI 2023.</span>
-              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10590358" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2022">
-              <span class="pub-tag">[C.2]</span>
-              <span class="pub-title">Analyzing the Network System Performance Based on the Queuing Theory Concept.</span>
-              <span class="pub-authors">O. Akbarzadeh, S. Hamzehei, A. Amer, N. Fasihihour, <strong>M. Karami</strong>.</span>
-              <span class="pub-venue">EICEEAI 2022.</span>
-              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10050495" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2022">
-              <span class="pub-tag">[C.1]</span>
-              <span class="pub-title">Multicast Optimization: Operational Research Theory and Applications.</span>
-              <span class="pub-authors">O. Akbarzadeh, <strong>M. Karami</strong>, N. Fasihihour, M. Alghanim, S. Hamzehei.</span>
-              <span class="pub-venue">EICEEAI 2022.</span>
-              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10050486/" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2022">
-              <span class="pub-tag">[T.1]</span>
-              <span class="pub-title">Machine Learning Algorithms for Radiogenomics: Application to Prediction of the MGMT Promoter Methylation Status in mpMRI Scans.</span>
-              <span class="pub-authors"><strong>M. Karami</strong>.</span>
-              <span class="pub-venue">Master’s thesis, Politecnico di Torino, 2022.</span>
-              <a class="pub-link" href="https://webthesis.biblio.polito.it/24496/" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2018">
-              <span class="pub-tag">[J.1]</span>
-              <span class="pub-title">Spam Detection from Big Data Based on Evolutionary Data Mining Systems.</span>
-              <span class="pub-authors">H. E. Chimeh, <strong>M. Karami</strong>.</span>
-              <span class="pub-venue">Transactions on Machine Intelligence, 1(1), 2018.</span>
-              <a class="pub-link" href="https://www.tmachineintelligence.ir/10.47176/TMI.2018.1" target="_blank" rel="noopener">Link</a>
-            </li>
-
-            <li class="pub" data-year="2025">
-              <span class="pub-tag">[S.1]</span>
-              <span class="pub-title">ImageReg: Modular, Open-Source Toolkit for Image Registration and Alignment.</span>
-              <span class="pub-authors">S. Hamzehei, <strong>M. Karami</strong>.</span>
-              <span class="pub-venue">Journal of Bioinformatics (in submission), 2025.</span>
-            </li>
-          </ol>
+          <ul id="pub-list" class="pub-list-simple">
+            <li class="pub" data-year="2025">2025 — Robust Training with Data Augmentation for Medical Imaging Classification.</li>
+            <li class="pub" data-year="2025">2025 — Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.</li>
+            <li class="pub" data-year="2025">2025 — Segmentation for Early Tumor Detection in Mammograms via Temporal Discrepancy Analysis and Dynamic Loss Weighting.</li>
+            <li class="pub" data-year="2025">2025 — Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.</li>
+            <li class="pub" data-year="2024">2024 — Multi-modal Spatial Clustering for Spatial Transcriptomics Utilizing High-Resolution Histology Images.</li>
+            <li class="pub" data-year="2024">2024 — DCCNV: Enhanced CNV Detection in Single-Cell Sequencing Using Diffusion Process and Contrastive Learning.</li>
+            <li class="pub" data-year="2024">2024 — CAPTURE: A Clustered Adaptive Patchwork Technique for Unified Registration Enhancement in Biological Imaging.</li>
+            <li class="pub" data-year="2023">2023 — Exploring the Relationship Between Air Pollution and CNS Disease Mortality in Italy: A Forecasting Study with ARIMA and XGBoost.</li>
+            <li class="pub" data-year="2023">2023 — Enhanced LSTM by Attention Mechanism for Early Detection of Parkinson’s Disease Through Voice Signals.</li>
+            <li class="pub" data-year="2022">2022 — Analyzing the Network System Performance Based on the Queuing Theory Concept.</li>
+            <li class="pub" data-year="2022">2022 — Multicast Optimization: Operational Research Theory and Applications.</li>
+            <li class="pub" data-year="2022">2022 — Machine Learning Algorithms for Radiogenomics: Application to Prediction of the MGMT Promoter Methylation Status in mpMRI Scans.</li>
+            <li class="pub" data-year="2018">2018 — Spam Detection from Big Data Based on Evolutionary Data Mining Systems.</li>
+            <li class="pub" data-year="2025">2025 — ImageReg: Modular, Open-Source Toolkit for Image Registration and Alignment.</li>
+          </ul>
         </section>
 
         <section id="projects" class="section section-card">
@@ -380,8 +297,8 @@
               <div class="project-body">
                 <h3>3D Mammogram GNN Transformer</h3>
                 <p>
-                  Graph-based Transformer for 3D digital breast tomosynthesis that encodes voxels as super-voxel graphs,
-                  enabling robust lesion detection and improved sensitivity to subtle temporal changes.
+                  Graph-based Transformer architecture for 3D digital breast tomosynthesis, operating on super-voxel graphs
+                  to capture topology and local context for early tumor detection.
                 </p>
               </div>
             </article>
@@ -390,8 +307,8 @@
               <div class="project-body">
                 <h3>Bayesian Transformer Cell Tracking</h3>
                 <p>
-                  Probabilistic Transformer-based cell tracking framework with higher-order graph matching and uncertainty
-                  estimates, built for multi-round tissue imaging and downstream spatial analysis.
+                  Uncertainty-aware Transformer coupled with higher-order graph matching for cell tracking in serial tissue
+                  sections, enabling robust multi-round reconstruction and quantitative analysis.
                 </p>
               </div>
             </article>
