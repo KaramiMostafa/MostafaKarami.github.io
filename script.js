@@ -53,7 +53,7 @@
   sections.forEach((s) => obs.observe(s));
 })();
 
-// ===== Scroll reveal animation for cards =====
+// ===== Scroll reveal animation for cards (not profile) =====
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
@@ -73,17 +73,14 @@
   cards.forEach((c) => obs.observe(c));
 })();
 
-// ===== Back-to-top button show/hide =====
+// ===== Back-to-top button =====
 (function () {
   const btn = document.querySelector(".scroll-top");
   if (!btn) return;
 
   const toggle = () => {
-    if (window.scrollY > 250) {
-      btn.classList.add("show");
-    } else {
-      btn.classList.remove("show");
-    }
+    if (window.scrollY > 250) btn.classList.add("show");
+    else btn.classList.remove("show");
   };
 
   window.addEventListener("scroll", toggle, { passive: true });
