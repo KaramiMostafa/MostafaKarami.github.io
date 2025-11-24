@@ -160,11 +160,12 @@ body{
   padding-top:12px;
 }
 .profile-cat-gif{
-  max-width:220px;
-  width:100%;
+  max-width:250px;
+  width:120%;
   height:auto;
   image-rendering:auto;
 }
+
 
 /* mobile section nav */
 .section-nav{ display:none }
