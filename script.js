@@ -1,3 +1,4 @@
+// ===== Publication filter by year =====
 (function () {
   const list = document.getElementById("pub-list");
   const buttons = document.querySelectorAll(".pub-filters [data-filter]");
@@ -16,6 +17,7 @@
   });
 })();
 
+// ===== Active section highlighting (left rail + mobile section nav) =====
 (function () {
   const sections = Array.from(document.querySelectorAll("main .section[id]"));
   if (!sections.length) return;
@@ -51,6 +53,7 @@
   sections.forEach((s) => obs.observe(s));
 })();
 
+// ===== Scroll reveal animation for cards (not profile) =====
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
@@ -70,22 +73,21 @@
   cards.forEach((c) => obs.observe(c));
 })();
 
+// ===== Back-to-top button =====
 (function () {
   const btn = document.querySelector(".scroll-top");
   if (!btn) return;
 
   const toggle = () => {
-    if (window.scrollY > 250) {
-      btn.classList.add("show");
-    } else {
-      btn.classList.remove("show");
-    }
+    if (window.scrollY > 250) btn.classList.add("show");
+    else btn.classList.remove("show");
   };
 
   window.addEventListener("scroll", toggle, { passive: true });
   toggle();
 })();
 
+// ===== Custom cursor ring =====
 (function () {
   const ring = document.getElementById("cursor-ring");
   if (!ring) return;
@@ -97,10 +99,10 @@
     return;
   }
 
-  let x = window.innerWidth / 2;
-  let y = window.innerHeight / 2;
-  let tx = x;
-  let ty = y;
+  let x = window.innerWidth / 2,
+    y = window.innerHeight / 2;
+  let tx = x,
+    ty = y;
   const speed = 0.18;
 
   function raf() {
