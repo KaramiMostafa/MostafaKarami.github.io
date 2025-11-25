@@ -402,8 +402,8 @@
           <input type="hidden" name="_subject" value="New message from MostafaKarami.github.io">
         
           <button class="btn primary contact-btn" type="submit">
-            <span class="btn-icon">✉</span>
-            <span>Send</span>
+            <span class="btn-icon" aria-hidden="true">✉</span>
+            <span class="btn-tooltip">Send</span>
           </button>
           <p class="contact-note">
             This form sends directly to my inbox via Formspree.
@@ -413,10 +413,6 @@
               <span>Message</span>
               <textarea name="message" rows="5" required></textarea>
             </label>
-            <button class="btn primary contact-btn" type="submit">
-              <span class="btn-icon">✉</span>
-              <span>Send</span>
-            </button>
             <p class="contact-note">Form is static right now — connect it to Formspree, Netlify Forms, or your own backend.</p>
           </form>
         </section>

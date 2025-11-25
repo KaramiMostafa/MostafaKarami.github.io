@@ -45,8 +45,12 @@ body::after{
 /* ===== Layout ===== */
 .wrap{ padding-left:104px }
 .layout{
-  max-width:1300px; margin:0 auto; padding:32px 32px 32px 24px;
-  display:grid; gap:32px; grid-template-columns:460px 1fr;
+  max-width:1300px;
+  margin:0 auto;
+  padding:32px 32px 32px 24px;
+  display:grid;
+  gap:32px;
+  grid-template-columns:460px 1fr; /* ← LEFT COLUMN WIDTH (profile card) */
 }
 @media (max-width:1024px){
   .wrap{ padding-left:0 }
@@ -126,14 +130,14 @@ body::after{
   flex-direction:column;
 }
 .profile-card{
-  position: sticky;
-  top:16px;                 /* distance from top of viewport when pinned */
+  position:sticky;        /* ← makes it stay visible on scroll */
+  top:16px;               /* distance from top when stuck */
   background:var(--card-bg);
   border:1px solid var(--card-border);
   border-radius:24px;
   box-shadow:var(--shadow);
-  min-height:calc(100vh - 32px);
-  padding:24px 24px 20px;
+  min-height:calc(100vh - 32px); /* ← how tall it wants to be */
+  padding:24px 24px 20px;        /* internal padding */
   display:flex;
   flex-direction:column;
 }
@@ -209,12 +213,12 @@ body::after{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:8px 16px;          /* was 10px 20px */
+  padding:10px 20px;
   border-radius:999px;
   border:1px solid transparent;
   font-weight:600;
   text-decoration:none;
-  font-size:0.9rem;          /* was 0.95rem */
+  font-size:0.95rem;
   cursor:pointer;
 }
 .btn.primary{
@@ -223,6 +227,35 @@ body::after{
   border-color:transparent;
   box-shadow:0 0 0 2px rgba(246,197,71,0.35);
 }
+.contact-btn{
+  position:relative;
+  padding:8px 16px;
+}
+.contact-btn .btn-icon{
+  font-size:1.4rem;
+  line-height:1;
+}
+.contact-btn .btn-tooltip{
+  position:absolute;
+  left:50%;
+  bottom:calc(100% + 6px);
+  transform:translateX(-50%) translateY(4px);
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(7,12,25,0.98);
+  color:var(--text);
+  font-size:.8rem;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .15s ease, transform .15s ease;
+}
+.contact-btn:hover .btn-tooltip,
+.contact-btn:focus-visible .btn-tooltip{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
 .cv-btn{
   margin-bottom:6px;         /* was 12px */
 }
