@@ -145,7 +145,7 @@ body::after{
 }
 .avatar{ display:flex; justify-content:center; margin-bottom:18px; }
 .avatar-img{
-  width:230px; height:230px;
+  width:270px; height:270px;
   border-radius:26px;
   object-fit:cover;
   box-shadow:0 0 0 4px rgba(246,197,71,0.9);
@@ -243,8 +243,8 @@ body::after{
   padding-top:16px;
 }
 .profile-cat-gif{
-  max-width:280px;
-  width:100%;
+  max-width:300px;
+  width:130%;
   height:auto;
 }
 
