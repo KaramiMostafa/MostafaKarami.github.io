@@ -160,8 +160,7 @@
 
             <ul class="profile-contact">
               <li>371 Fairfield Way, Room 229, Storrs, CT 06268, USA</li>
-              <li><a href="mailto:Mostafa.Karami@uconn.edu">Mostafa.Karami@uconn.edu</a></li>
-            </ul>
+            </ul>            
 
             <div class="social-icons">
               <a class="icon-btn" href="mailto:Mostafa.Karami@uconn.edu" aria-label="Email">
@@ -375,24 +374,42 @@
           <h2>Let’s Work Together</h2>
           <p class="contact-subtitle">Have a project, idea, or collaboration in mind?</p>
 
-          <form class="contact-form" method="post" action="#">
-            <div class="contact-row">
-              <label>
-                <span>Full Name</span>
-                <input type="text" name="name" required>
-              </label>
-              <label>
-                <span>Email Address</span>
-                <input type="email" name="email" required>
-              </label>
-            </div>
-            <div class="contact-row">
-              <label>
-                <span>Subject</span>
-                <input type="text" name="subject" required>
-              </label>
-            </div>
-            <label class="contact-message">
+          <form class="contact-form"
+          method="POST"
+          action="https://formspree.io/f/xldkzlye">
+          <div class="contact-row">
+            <label>
+              <span>Full Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Email Address</span>
+              <input type="email" name="email" required>
+            </label>
+          </div>
+          <div class="contact-row">
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" required>
+            </label>
+          </div>
+          <label class="contact-message">
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+        
+          <!-- Optional: control the email subject line -->
+          <input type="hidden" name="_subject" value="New message from MostafaKarami.github.io">
+        
+          <button class="btn primary contact-btn" type="submit">
+            <span class="btn-icon">✉</span>
+            <span>Send</span>
+          </button>
+          <p class="contact-note">
+            This form sends directly to my inbox via Formspree.
+          </p>
+        </form>
+    
               <span>Message</span>
               <textarea name="message" rows="5" required></textarea>
             </label>
