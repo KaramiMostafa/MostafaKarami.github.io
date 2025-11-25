@@ -209,12 +209,12 @@ body::after{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:10px 20px;
+  padding:8px 16px;          /* was 10px 20px */
   border-radius:999px;
   border:1px solid transparent;
   font-weight:600;
   text-decoration:none;
-  font-size:0.95rem;
+  font-size:0.9rem;          /* was 0.95rem */
   cursor:pointer;
 }
 .btn.primary{
@@ -223,16 +223,12 @@ body::after{
   border-color:transparent;
   box-shadow:0 0 0 2px rgba(246,197,71,0.35);
 }
-.btn.primary:hover{
-  filter:brightness(1.03);
-  box-shadow:0 0 0 3px rgba(246,197,71,0.5);
-}
 .cv-btn{
-  margin-bottom:12px;
+  margin-bottom:6px;         /* was 12px */
 }
 .cv-btn .btn-icon{
-  margin-right:8px;
-  font-size:1.05rem;
+  margin-right:6px;          /* a bit tighter */
+  font-size:0.95rem;         /* slightly smaller */
 }
 
 /* cat */
@@ -240,10 +236,10 @@ body::after{
   margin-top:auto;
   display:flex;
   justify-content:center;
-  padding-top:16px;
+  padding-top:8px;
 }
 .profile-cat-gif{
-  max-width:300px;
+  max-width:275px;
   width:130%;
   height:auto;
 }
