@@ -126,8 +126,8 @@ body::after{
   flex-direction:column;
 }
 .profile-card{
-  position:sticky;
-  top:16px;
+  position: sticky;
+  top:16px;                 /* distance from top of viewport when pinned */
   background:var(--card-bg);
   border:1px solid var(--card-border);
   border-radius:24px;
