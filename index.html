@@ -218,9 +218,20 @@
         <section id="about" class="section section-card">
           <h2>About</h2>
           <p>
-            I’m a Ph.D. student in Computer Science &amp; Engineering at the University of Connecticut.
-            My work focuses on 3D digital breast tomosynthesis and microscopic images, with methods for cell tracking,
-            feature-based registration, and robust ML for noisy, distribution-shifted biomedical data.
+            I studied electrical engineering at Shahid Beheshti University, where I focused on control systems and optimization.
+            For my bachelor’s thesis, I designed a smart-grid control system that used PID controllers and KNN algorithms to
+            manage different energy sources efficiently.
+          </p>
+          <p>
+            I moved into Information and Communication Technology (ICT) for my master’s studies. During this time, I worked on
+            topics such as smart network optimization, machine learning, deep learning, and IoT. I completed my thesis at the
+            University of Cologne, where I worked on MRI calcification detection methods. This project introduced me to medical
+            imaging and showed me how learning-based methods can support diagnosis and treatment.
+          </p>
+          <p>
+            I am now a Ph.D. student working on deep learning for medical and biomedical imaging. My research involves 3D data
+            and microscopic images, with a focus on finding complex patterns and making the models more explainable and robust.
+            I am especially interested in developing reliable AI tools that can be used in real clinical settings.
           </p>
         </section>
 
@@ -373,49 +384,42 @@
         <section id="contact" class="section section-card contact-card">
           <h2>Let’s Work Together</h2>
           <p class="contact-subtitle">Have a project, idea, or collaboration in mind?</p>
-
+        
           <form class="contact-form"
-          method="POST"
-          action="https://formspree.io/f/xldkzlye">
-          <div class="contact-row">
-            <label>
-              <span>Full Name</span>
-              <input type="text" name="name" required>
-            </label>
-            <label>
-              <span>Email Address</span>
-              <input type="email" name="email" required>
-            </label>
-          </div>
-          <div class="contact-row">
-            <label>
-              <span>Subject</span>
-              <input type="text" name="subject" required>
-            </label>
-          </div>
-          <label class="contact-message">
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
+                method="POST"
+                action="https://formspree.io/f/xldkzlye">
+            <div class="contact-row">
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="name" required>
+              </label>
+              <label>
+                <span>Email Address</span>
+                <input type="email" name="email" required>
+              </label>
+            </div>
         
-          <!-- Optional: control the email subject line -->
-          <input type="hidden" name="_subject" value="New message from MostafaKarami.github.io">
+            <div class="contact-row">
+              <label>
+                <span>Subject</span>
+                <input type="text" name="subject" required>
+              </label>
+            </div>
         
-          <button class="btn primary contact-btn" type="submit">
-            <span class="btn-icon" aria-hidden="true">✉</span>
-            <span class="btn-tooltip">Send</span>
-          </button>
-          <p class="contact-note">
-            This form sends directly to my inbox via Formspree.
-          </p>
-        </form>
-    
+            <label class="contact-message">
               <span>Message</span>
               <textarea name="message" rows="5" required></textarea>
             </label>
-            <p class="contact-note">Form is static right now — connect it to Formspree, Netlify Forms, or your own backend.</p>
+        
+            <!-- Optional: control the email subject line -->
+            <input type="hidden" name="_subject" value="New message from mostafakarami.com">
+        
+            <!-- Simple "Send" button: no envelope icon, no tooltip -->
+            <button class="btn primary contact-btn" type="submit">
+              <span>Send</span>
+            </button>
           </form>
-        </section>
+        </section>        
 
       </main>
     </div>
