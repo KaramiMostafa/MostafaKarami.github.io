@@ -1,7 +1,0 @@
-<!-- pics/mk_logo.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="2" y="2" width="60" height="60" rx="14" ry="14" fill="#ffffff"></rect>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="28" fill="#000000">
-    mk
-  </text>
-</svg>
