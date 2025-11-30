@@ -53,7 +53,7 @@
   sections.forEach((s) => obs.observe(s));
 })();
 
-// ===== Scroll reveal animation for cards (animate every time) =====
+// ===== Scroll reveal animation for cards (staggered) =====
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
@@ -62,7 +62,6 @@
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // card is in view → show it
           entry.target.classList.add("in-view");
         } else {
           entry.target.classList.remove("in-view");
@@ -72,12 +71,18 @@
     {
       root: null,
       rootMargin: "0px",
-      threshold: 0.15, 
+      threshold: 0.15,
     }
   );
 
-  cards.forEach((c) => obs.observe(c));
+  // assign a delay per card → cascading effect
+  cards.forEach((card, index) => {
+    const delay = index * 0.08; // 0s, 0.08s, 0.16s, ...
+    card.style.setProperty("--stagger-delay", `${delay}s`);
+    obs.observe(card);
+  });
 })();
+
 
 
 // ===== Back-to-top button =====

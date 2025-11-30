@@ -311,11 +311,13 @@ body::after{
   opacity:0;
   transform:translateY(30px);
   transition:opacity .45s ease-out, transform .45s ease-out;
+  transition-delay: var(--stagger-delay, 0s);  /* 👈 NEW: each card can have its own delay */
 }
 .section-card.in-view{
   opacity:1;
   transform:none;
 }
+
 
 /* headings */
 .section h2{
