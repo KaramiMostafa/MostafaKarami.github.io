@@ -53,7 +53,7 @@
   sections.forEach((s) => obs.observe(s));
 })();
 
-// ===== Scroll reveal animation for cards (not profile) =====
+// ===== Scroll reveal animation for cards (animate every time) =====
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
@@ -62,16 +62,23 @@
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // card is in view → show it
           entry.target.classList.add("in-view");
-          obs.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("in-view");
         }
       });
     },
-    { threshold: 0.15 }
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15, 
+    }
   );
 
   cards.forEach((c) => obs.observe(c));
 })();
+
 
 // ===== Back-to-top button =====
 (function () {
