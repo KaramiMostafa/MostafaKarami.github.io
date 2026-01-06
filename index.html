@@ -25,6 +25,14 @@
 
   <!-- LEFT RAIL (section navigation icons) -->
   <aside class="left-rail" aria-label="Section navigation">
+
+    <!-- Theme toggle -->
+    <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <span class="theme-toggle-thumb"></span>
+      <span class="theme-toggle-icon theme-toggle-icon--dark">☾</span>
+      <span class="theme-toggle-icon theme-toggle-icon--light">☀</span>
+    </button>
+    
     <nav class="side-nav">
       <!-- About -->
       <a href="#about" class="nav-item" data-section="about">
@@ -217,23 +225,27 @@
 
         <section id="about" class="section section-card">
           <h2>About</h2>
+        
           <p>
             I studied electrical engineering at Shahid Beheshti University, where I focused on control systems and optimization.
             For my bachelor’s thesis, I designed a smart-grid control system that used PID controllers and KNN algorithms to
             manage different energy sources efficiently.
           </p>
+        
           <p>
             I moved into Information and Communication Technology (ICT) for my master’s studies. During this time, I worked on
             topics such as smart network optimization, machine learning, deep learning, and IoT. I completed my thesis at the
             University of Cologne, where I worked on MRI calcification detection methods. This project introduced me to medical
             imaging and showed me how learning-based methods can support diagnosis and treatment.
           </p>
+        
           <p>
             I am now a Ph.D. student working on deep learning for medical and biomedical imaging. My research involves 3D data
             and microscopic images, with a focus on finding complex patterns and making the models more explainable and robust.
             I am especially interested in developing reliable AI tools that can be used in real clinical settings.
           </p>
         </section>
+        
 
         <section id="education" class="section section-card">
           <h2>Education</h2>
@@ -348,28 +360,73 @@
 
         <section id="projects" class="section section-card">
           <h2>Projects</h2>
-          <div class="project-grid">
-            <article class="project">
+        
+          <div class="project-grid project-grid--stack">
+            <!-- Project 1: SynGAN / Longitudinal tumor generation -->
+            <article class="project project--wide">
+              <figure class="project-figure">
+                <img src="pics/2D_GAN_overview.png"
+                     alt="Overview of the longitudinal tumor generation framework (SynGAN)"
+                     class="project-img"
+                     loading="lazy">
+              </figure>
+        
               <div class="project-body">
-                <h3>3D Mammogram GNN Transformer</h3>
+                <h3>Longitudinal Tumor Generation in Mammograms (SynGAN)</h3>
                 <p>
-                  Graph-based Transformer architecture for 3D digital breast tomosynthesis, operating on super-voxel graphs
-                  to capture topology and local context for early tumor detection.
+                  We introduce an end-to-end generative framework that synthesizes realistic tumor development in full-field
+                  digital mammograms by conditioning on prior and current normal exams. The model encodes each timepoint with
+                  Transformer-based feature extractors, samples diverse tumor appearances from a variational latent space, and
+                  reconstructs context-aware tumors using attention-based decoding. A differentiable soft-mask blending module
+                  inserts the synthesized tumor into the current mammogram to support longitudinal simulation and data
+                  augmentation.
+                </p>
+        
+                <p class="project-cite">
+                  <strong>Citation:</strong> A. Ahsan Jeny, S. Hamzehei, <strong>M. Karami</strong>, et al.,
+                  “Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.” ACM BCB, 2025.
+                </p>
+        
+                <p class="project-links">
+                  <a href="https://github.com/NabaviLab/SynGAN" target="_blank" rel="noopener">Code: NabaviLab/SynGAN</a>
                 </p>
               </div>
             </article>
-
-            <article class="project">
+        
+            <!-- Project 2: Bayesian Transformer cell tracking -->
+            <article class="project project--wide">
+              <figure class="project-figure">
+                <img src="pics/tracking_overview.png"
+                     alt="Overview of the Bayesian Transformer cell tracking framework"
+                     class="project-img"
+                     loading="lazy">
+              </figure>
+        
               <div class="project-body">
-                <h3>Bayesian Transformer Cell Tracking</h3>
+                <h3>Bayesian Transformer Cell Tracking for Serial Tissue Sections</h3>
                 <p>
-                  Uncertainty-aware Transformer coupled with higher-order graph matching for cell tracking in serial tissue
-                  sections, enabling robust multi-round reconstruction and quantitative analysis.
+                  We propose a Bayesian Transformer tracking framework for highly noise-prone serial 2D multiplex tissue sections,
+                  where ultrathin slicing and alignment artifacts break conventional tracking. The approach uses uncertainty-aware
+                  feature embeddings (morphology, texture descriptors, and CNN features) and links cells across sections via
+                  higher-order graph matching with belief propagation. This enables more consistent cell trajectories and supports
+                  reliable 3D reconstruction of tissue organization, with validation on private multiplex data and public
+                  time-lapse microscopy.
+                </p>
+        
+                <p class="project-cite">
+                  <strong>Citation:</strong> <strong>M. Karami</strong>, S. Hamzehei, D. Arce, G. Raimondi, L. Ostroff, S. Nabavi,
+                  “Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.” MICCAI, 2025.
+                </p>
+        
+                <p class="project-links">
+                  <a href="https://github.com/NabaviLab/bayesian-transformer-cell-tracking" target="_blank" rel="noopener">
+                    Code: NabaviLab/bayesian-transformer-cell-tracking
+                  </a>
                 </p>
               </div>
             </article>
           </div>
-        </section>
+        </section>        
 
         <section id="skills" class="section section-card">
           <h2>Skills</h2>
@@ -411,15 +468,12 @@
               <textarea name="message" rows="5" required></textarea>
             </label>
         
-            <!-- Optional: control the email subject line -->
             <input type="hidden" name="_subject" value="New message from mostafakarami.com">
         
-            <!-- Simple "Send" button: no envelope icon, no tooltip -->
-            <button class="btn primary contact-btn" type="submit">
-              <span>Send</span>
-            </button>
+            <!-- NO envelope icon; just text -->
+            <button class="btn primary contact-btn" type="submit">Send</button>
           </form>
-        </section>        
+        </section>              
 
       </main>
     </div>
