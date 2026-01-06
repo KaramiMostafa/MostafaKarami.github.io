@@ -4,37 +4,20 @@
   <meta charset="utf-8">
   <title>Mostafa Karami — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Mostafa Karami — Ph.D. student in Computer Science &amp; Engineering at the University of Connecticut. Research in biomedical imaging, machine learning, robustness, and privacy.">
-
-  <!-- Styles -->
+  <meta name="description" content="Mostafa Karami — Ph.D. student in Computer Science &amp; Engineering at the University of Connecticut. Research in biomedical imaging, machine learning, robustness, and privacy.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='14' ry='14' fill='%23050712'/%3E%3Crect x='14' y='18' width='36' height='28' rx='6' ry='6' fill='none' stroke='%23f6c547' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='9' fill='none' stroke='%23f6c547' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23f6c547'/%3E%3Cpath d='M18 24l-4-4M18 40l-4 4M46 24l4-4M46 40l4 4' stroke='%23f6c547' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
-
-
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Scripts -->
   <script defer src="script.js"></script>
 </head>
-<body id="top">
 
-  <!-- LEFT RAIL (section navigation icons) -->
+<body id="top">
   <aside class="left-rail" aria-label="Section navigation">
     <nav class="side-nav">
-  
-      <button class="nav-item theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <button class="nav-item theme-toggle" type="button" aria-label="Toggle theme">
         <div class="nav-icon">
-          <!-- moon (shown in dark mode) -->
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.8A8 8 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8z"></path>
-          </svg>
-          <!-- sun (shown in light mode) -->
           <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="4"></circle>
@@ -43,14 +26,16 @@
             <path d="M2 12h2"></path><path d="M20 12h2"></path>
             <path d="M4.93 19.07l1.41-1.41"></path><path d="M17.66 6.34l1.41-1.41"></path>
           </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A8 8 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8z"></path>
+          </svg>
         </div>
         <span class="nav-label">Theme</span>
       </button>
 
-      <!-- About -->
       <a href="#about" class="nav-item" data-section="about">
         <div class="nav-icon">
-          <!-- user icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="8" r="3"></circle>
@@ -60,10 +45,8 @@
         <span class="nav-label">About</span>
       </a>
 
-      <!-- Education -->
       <a href="#education" class="nav-item" data-section="education">
         <div class="nav-icon">
-          <!-- cap icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
@@ -73,10 +56,8 @@
         <span class="nav-label">Education</span>
       </a>
 
-      <!-- Experience -->
       <a href="#experience" class="nav-item" data-section="experience">
         <div class="nav-icon">
-          <!-- briefcase -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="7" width="20" height="14" rx="2"></rect>
@@ -86,10 +67,8 @@
         <span class="nav-label">Experience</span>
       </a>
 
-      <!-- Publications -->
       <a href="#publications" class="nav-item" data-section="publications">
         <div class="nav-icon">
-          <!-- document icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="5" y="3" width="12" height="18" rx="1.5"></rect>
@@ -101,13 +80,10 @@
         <span class="nav-label">Publications</span>
       </a>
 
-      <!-- Projects -->
       <a href="#projects" class="nav-item" data-section="projects">
         <div class="nav-icon">
-          <!-- gears icon -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <!-- big gear -->
             <circle cx="15" cy="9" r="2.4"></circle>
             <path d="M15 5.5v-1.5"></path>
             <path d="M15 14v-1.5"></path>
@@ -117,8 +93,6 @@
             <path d="M18.4 12.4l-1.1-1.1"></path>
             <path d="M12.7 11.3l-1.1 1.1"></path>
             <path d="M18.4 5.6l-1.1 1.1"></path>
-
-            <!-- small gear -->
             <circle cx="7" cy="15" r="1.8"></circle>
             <path d="M7 12.2v-.9"></path>
             <path d="M7 18.8v-.9"></path>
@@ -133,11 +107,8 @@
         <span class="nav-label">Projects</span>
       </a>
 
-
-      <!-- Skills -->
       <a href="#skills" class="nav-item" data-section="skills">
         <div class="nav-icon">
-          <!-- code arrows -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M16 18l6-6-6-6"></path>
@@ -147,10 +118,8 @@
         <span class="nav-label">Skills</span>
       </a>
 
-      <!-- Contact -->
       <a href="#contact" class="nav-item" data-section="contact">
         <div class="nav-icon">
-          <!-- mail -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2"></rect>
@@ -164,8 +133,6 @@
 
   <div class="wrap">
     <div class="layout">
-
-      <!-- LEFT COLUMN: sticky profile + cat -->
       <div class="left-column">
         <aside class="profile-card" aria-labelledby="name">
           <div class="profile-main">
@@ -181,7 +148,7 @@
 
             <ul class="profile-contact">
               <li>371 Fairfield Way, Room 229, Storrs, CT 06268, USA</li>
-            </ul>            
+            </ul>
 
             <div class="social-icons">
               <a class="icon-btn" href="mailto:Mostafa.Karami@uconn.edu" aria-label="Email">
@@ -211,20 +178,8 @@
             </div>
 
             <a class="btn primary cv-btn" href="CV/CV_Karami_2025.pdf" download="Mostafa_Karami_CV_2025">
-              <span class="btn-icon">⬇</span>
               <span>Download CV</span>
             </a>
-
-            <!-- mobile section shortcuts -->
-            <nav class="section-nav m-section-nav" aria-label="Sections">
-              <a href="#about"        data-section="about">About</a>
-              <a href="#education"    data-section="education">Education</a>
-              <a href="#experience"   data-section="experience">Experience</a>
-              <a href="#publications" data-section="publications">Publications</a>
-              <a href="#projects"     data-section="projects">Projects</a>
-              <a href="#skills"       data-section="skills">Skills</a>
-              <a href="#contact"      data-section="contact">Contact</a>
-            </nav>
           </div>
 
           <div class="profile-cat">
@@ -233,32 +188,29 @@
         </aside>
       </div>
 
-      <!-- RIGHT COLUMN: main content -->
       <main class="content">
-
         <section id="about" class="section section-card">
           <h2>About</h2>
-        
+
           <p>
             I studied electrical engineering at Shahid Beheshti University, where I focused on control systems and optimization.
             For my bachelor’s thesis, I designed a smart-grid control system that used PID controllers and KNN algorithms to
             manage different energy sources efficiently.
           </p>
-        
+
           <p>
             I moved into Information and Communication Technology (ICT) for my master’s studies. During this time, I worked on
             topics such as smart network optimization, machine learning, deep learning, and IoT. I completed my thesis at the
             University of Cologne, where I worked on MRI calcification detection methods. This project introduced me to medical
             imaging and showed me how learning-based methods can support diagnosis and treatment.
           </p>
-        
+
           <p>
             I am now a Ph.D. student working on deep learning for medical and biomedical imaging. My research involves 3D data
             and microscopic images, with a focus on finding complex patterns and making the models more explainable and robust.
             I am especially interested in developing reliable AI tools that can be used in real clinical settings.
           </p>
         </section>
-        
 
         <section id="education" class="section section-card">
           <h2>Education</h2>
@@ -308,7 +260,7 @@
           <p class="pub-legend">Selected peer-reviewed publications and submissions.</p>
 
           <div class="pub-filters" role="tablist" aria-label="Filter by year">
-            <button class="chip" role="tab" aria-selected="true"  data-filter="all">All</button>
+            <button class="chip" role="tab" aria-selected="true" data-filter="all">All</button>
             <button class="chip" role="tab" aria-selected="false" data-filter="2025">2025</button>
             <button class="chip" role="tab" aria-selected="false" data-filter="2024">2024</button>
             <button class="chip" role="tab" aria-selected="false" data-filter="2023">2023</button>
@@ -317,74 +269,32 @@
           </div>
 
           <ul id="pub-list" class="pub-list-simple">
-            <!-- 2025 -->
-            <li class="pub" data-year="2025">
-              <span class="pub-year">2025</span> — Robust Training with Data Augmentation for Medical Imaging Classification.
-            </li>
-            <li class="pub" data-year="2025">
-              <span class="pub-year">2025</span> — Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.
-            </li>
-            <li class="pub" data-year="2025">
-              <span class="pub-year">2025</span> — Segmentation for Early Tumor Detection in Mammograms via Temporal Discrepancy Analysis and Dynamic Loss Weighting.
-            </li>
-            <li class="pub" data-year="2025">
-              <span class="pub-year">2025</span> — Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.
-            </li>
-            <li class="pub" data-year="2025">
-              <span class="pub-year">2025</span> — ImageReg: Modular, Open-Source Toolkit for Image Registration and Alignment.
-            </li>
-
-            <!-- 2024 -->
-            <li class="pub" data-year="2024">
-              <span class="pub-year">2024</span> — Multi-modal Spatial Clustering for Spatial Transcriptomics Utilizing High-Resolution Histology Images.
-            </li>
-            <li class="pub" data-year="2024">
-              <span class="pub-year">2024</span> — DCCNV: Enhanced CNV Detection in Single-Cell Sequencing Using Diffusion Process and Contrastive Learning.
-            </li>
-            <li class="pub" data-year="2024">
-              <span class="pub-year">2024</span> — CAPTURE: A Clustered Adaptive Patchwork Technique for Unified Registration Enhancement in Biological Imaging.
-            </li>
-
-            <!-- 2023 -->
-            <li class="pub" data-year="2023">
-              <span class="pub-year">2023</span> — Exploring the Relationship Between Air Pollution and CNS Disease Mortality in Italy: A Forecasting Study with ARIMA and XGBoost.
-            </li>
-            <li class="pub" data-year="2023">
-              <span class="pub-year">2023</span> — Enhanced LSTM by Attention Mechanism for Early Detection of Parkinson’s Disease Through Voice Signals.
-            </li>
-
-            <!-- 2022 -->
-            <li class="pub" data-year="2022">
-              <span class="pub-year">2022</span> — Analyzing the Network System Performance Based on the Queuing Theory Concept.
-            </li>
-            <li class="pub" data-year="2022">
-              <span class="pub-year">2022</span> — Multicast Optimization: Operational Research Theory and Applications.
-            </li>
-            <li class="pub" data-year="2022">
-              <span class="pub-year">2022</span> — Machine Learning Algorithms for Radiogenomics: Application to Prediction of the MGMT Promoter Methylation Status in mpMRI Scans.
-            </li>
-
-            <!-- 2018 -->
-            <li class="pub" data-year="2018">
-              <span class="pub-year">2018</span> — Spam Detection from Big Data Based on Evolutionary Data Mining Systems.
-            </li>
+            <li class="pub" data-year="2025"><span class="pub-year">2025</span> — Robust Training with Data Augmentation for Medical Imaging Classification.</li>
+            <li class="pub" data-year="2025"><span class="pub-year">2025</span> — Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.</li>
+            <li class="pub" data-year="2025"><span class="pub-year">2025</span> — Segmentation for Early Tumor Detection in Mammograms via Temporal Discrepancy Analysis and Dynamic Loss Weighting.</li>
+            <li class="pub" data-year="2025"><span class="pub-year">2025</span> — Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.</li>
+            <li class="pub" data-year="2025"><span class="pub-year">2025</span> — ImageReg: Modular, Open-Source Toolkit for Image Registration and Alignment.</li>
+            <li class="pub" data-year="2024"><span class="pub-year">2024</span> — Multi-modal Spatial Clustering for Spatial Transcriptomics Utilizing High-Resolution Histology Images.</li>
+            <li class="pub" data-year="2024"><span class="pub-year">2024</span> — DCCNV: Enhanced CNV Detection in Single-Cell Sequencing Using Diffusion Process and Contrastive Learning.</li>
+            <li class="pub" data-year="2024"><span class="pub-year">2024</span> — CAPTURE: A Clustered Adaptive Patchwork Technique for Unified Registration Enhancement in Biological Imaging.</li>
+            <li class="pub" data-year="2023"><span class="pub-year">2023</span> — Exploring the Relationship Between Air Pollution and CNS Disease Mortality in Italy: A Forecasting Study with ARIMA and XGBoost.</li>
+            <li class="pub" data-year="2023"><span class="pub-year">2023</span> — Enhanced LSTM by Attention Mechanism for Early Detection of Parkinson’s Disease Through Voice Signals.</li>
+            <li class="pub" data-year="2022"><span class="pub-year">2022</span> — Analyzing the Network System Performance Based on the Queuing Theory Concept.</li>
+            <li class="pub" data-year="2022"><span class="pub-year">2022</span> — Multicast Optimization: Operational Research Theory and Applications.</li>
+            <li class="pub" data-year="2022"><span class="pub-year">2022</span> — Machine Learning Algorithms for Radiogenomics: Application to Prediction of the MGMT Promoter Methylation Status in mpMRI Scans.</li>
+            <li class="pub" data-year="2018"><span class="pub-year">2018</span> — Spam Detection from Big Data Based on Evolutionary Data Mining Systems.</li>
           </ul>
         </section>
 
         <section id="projects" class="section section-card">
           <h2>Projects</h2>
-        
+
           <div class="project-grid project-grid--stack">
-            <!-- Project 1: SynGAN / Longitudinal tumor generation -->
             <article class="project project--wide">
               <figure class="project-figure">
-                <img src="pics/2D_GAN_overview.png"
-                     alt="Overview of the longitudinal tumor generation framework (SynGAN)"
-                     class="project-img"
-                     loading="lazy">
+                <img src="pics/2D_GAN_overview.png" alt="Overview of the longitudinal tumor generation framework (SynGAN)" class="project-img" loading="lazy">
               </figure>
-        
-              <div class="project-body">
+              <div class="project-body project-body--wide">
                 <h3>Longitudinal Tumor Generation in Mammograms (SynGAN)</h3>
                 <p>
                   We introduce an end-to-end generative framework that synthesizes realistic tumor development in full-field
@@ -394,28 +304,21 @@
                   inserts the synthesized tumor into the current mammogram to support longitudinal simulation and data
                   augmentation.
                 </p>
-        
                 <p class="project-cite">
                   <strong>Citation:</strong> A. Ahsan Jeny, S. Hamzehei, <strong>M. Karami</strong>, et al.,
                   “Longitudinal Tumor Generation in Mammograms via Dual Encoder GAN and Learnable Blending.” ACM BCB, 2025.
                 </p>
-        
                 <p class="project-links">
                   <a href="https://github.com/NabaviLab/SynGAN" target="_blank" rel="noopener">Code: NabaviLab/SynGAN</a>
                 </p>
               </div>
             </article>
-        
-            <!-- Project 2: Bayesian Transformer cell tracking -->
+
             <article class="project project--wide">
               <figure class="project-figure">
-                <img src="pics/tracking_overview.png"
-                     alt="Overview of the Bayesian Transformer cell tracking framework"
-                     class="project-img"
-                     loading="lazy">
+                <img src="pics/tracking_overview.png" alt="Overview of the Bayesian Transformer cell tracking framework" class="project-img" loading="lazy">
               </figure>
-        
-              <div class="project-body">
+              <div class="project-body project-body--wide">
                 <h3>Bayesian Transformer Cell Tracking for Serial Tissue Sections</h3>
                 <p>
                   We propose a Bayesian Transformer tracking framework for highly noise-prone serial 2D multiplex tissue sections,
@@ -425,12 +328,10 @@
                   reliable 3D reconstruction of tissue organization, with validation on private multiplex data and public
                   time-lapse microscopy.
                 </p>
-        
                 <p class="project-cite">
                   <strong>Citation:</strong> <strong>M. Karami</strong>, S. Hamzehei, D. Arce, G. Raimondi, L. Ostroff, S. Nabavi,
                   “Bayesian Transformers and Higher-Order Graph Matching for Cell Tracking in Serial Tissue Sections.” MICCAI, 2025.
                 </p>
-        
                 <p class="project-links">
                   <a href="https://github.com/NabaviLab/bayesian-transformer-cell-tracking" target="_blank" rel="noopener">
                     Code: NabaviLab/bayesian-transformer-cell-tracking
@@ -439,7 +340,7 @@
               </div>
             </article>
           </div>
-        </section>        
+        </section>
 
         <section id="skills" class="section section-card">
           <h2>Skills</h2>
@@ -450,14 +351,11 @@
           </ul>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact" class="section section-card contact-card">
           <h2>Let’s Work Together</h2>
           <p class="contact-subtitle">Have a project, idea, or collaboration in mind?</p>
-        
-          <form class="contact-form"
-                method="POST"
-                action="https://formspree.io/f/xldkzlye">
+
+          <form class="contact-form" method="POST" action="https://formspree.io/f/xldkzlye">
             <div class="contact-row">
               <label>
                 <span>Full Name</span>
@@ -468,35 +366,28 @@
                 <input type="email" name="email" required>
               </label>
             </div>
-        
+
             <div class="contact-row">
               <label>
                 <span>Subject</span>
                 <input type="text" name="subject" required>
               </label>
             </div>
-        
+
             <label class="contact-message">
               <span>Message</span>
               <textarea name="message" rows="5" required></textarea>
             </label>
-        
+
             <input type="hidden" name="_subject" value="New message from mostafakarami.com">
-        
-            <!-- NO envelope icon; just text -->
             <button class="btn primary contact-btn" type="submit">Send</button>
           </form>
-        </section>              
-
+        </section>
       </main>
     </div>
   </div>
 
-  <!-- Back-to-top arrow -->
   <a href="#top" class="scroll-top" aria-label="Back to top">↑</a>
-
-  <!-- custom cursor ring -->
   <div id="cursor-ring" aria-hidden="true"></div>
-
 </body>
 </html>

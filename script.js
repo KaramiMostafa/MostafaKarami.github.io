@@ -1,48 +1,32 @@
-// ===== Publication filter by year =====
-// ===== Theme toggle (default dark; remembers choice) =====
 (function () {
-  const toggle = document.querySelector(".theme-toggle");
-  if (!toggle) return;
+  const list = document.getElementById("pub-list");
+  const buttons = document.querySelectorAll(".pub-filters [data-filter]");
+  if (!list || !buttons.length) return;
 
-  const apply = (mode) => {
-    document.body.classList.toggle("light", mode === "light");
-    try { localStorage.setItem("theme", mode); } catch(e) {}
-  };
-
-  // Default = dark unless user previously chose light
-  let saved = null;
-  try { saved = localStorage.getItem("theme"); } catch(e) {}
-  if (saved === "light") apply("light");
-  else apply("dark");
-
-  toggle.addEventListener("click", () => {
-    const isLight = document.body.classList.contains("light");
-    apply(isLight ? "dark" : "light");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.setAttribute("aria-selected", "false"));
+      btn.setAttribute("aria-selected", "true");
+      const year = btn.getAttribute("data-filter");
+      list.querySelectorAll(".pub").forEach((item) => {
+        const show = year === "all" || item.getAttribute("data-year") === year;
+        item.style.display = show ? "" : "none";
+      });
+    });
   });
 })();
 
-
-// ===== Active section highlighting (left rail + mobile section nav) =====
 (function () {
   const sections = Array.from(document.querySelectorAll("main .section[id]"));
   if (!sections.length) return;
 
-  const navItems = Array.from(
-    document.querySelectorAll(".side-nav .nav-item[data-section]")
-  );
-  const mobileLinks = Array.from(
-    document.querySelectorAll(".m-section-nav a[data-section]")
-  );
+  const navItems = Array.from(document.querySelectorAll(".side-nav .nav-item[data-section]"));
 
   const setActive = (id) => {
     navItems.forEach((a) => {
       const on = a.dataset.section === id;
       a.classList.toggle("active", on);
       a.setAttribute("aria-current", on ? "page" : "false");
-    });
-    mobileLinks.forEach((a) => {
-      const on = a.dataset.section === id;
-      a.classList.toggle("active", on);
     });
   };
 
@@ -58,7 +42,6 @@
   sections.forEach((s) => obs.observe(s));
 })();
 
-// ===== Scroll reveal animation for cards (staggered) =====
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
@@ -66,31 +49,20 @@
   const obs = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        } else {
-          entry.target.classList.remove("in-view");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("in-view");
+        else entry.target.classList.remove("in-view");
       });
     },
-    {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.15,
-    }
+    { root: null, rootMargin: "0px", threshold: 0.15 }
   );
 
-  // assign a delay per card → cascading effect
   cards.forEach((card, index) => {
-    const delay = index * 0.08; // 0s, 0.08s, 0.16s, ...
+    const delay = index * 0.08;
     card.style.setProperty("--stagger-delay", `${delay}s`);
     obs.observe(card);
   });
 })();
 
-
-
-// ===== Back-to-top button =====
 (function () {
   const btn = document.querySelector(".scroll-top");
   if (!btn) return;
@@ -104,7 +76,6 @@
   toggle();
 })();
 
-// ===== Custom cursor ring =====
 (function () {
   const ring = document.getElementById("cursor-ring");
   if (!ring) return;
@@ -116,10 +87,8 @@
     return;
   }
 
-  let x = window.innerWidth / 2,
-    y = window.innerHeight / 2;
-  let tx = x,
-    ty = y;
+  let x = window.innerWidth / 2, y = window.innerHeight / 2;
+  let tx = x, ty = y;
   const speed = 0.18;
 
   function raf() {
@@ -130,22 +99,14 @@
   }
   requestAnimationFrame(raf);
 
-  window.addEventListener(
-    "mousemove",
-    (e) => {
-      tx = e.clientX;
-      ty = e.clientY;
-      ring.style.opacity = "1";
-    },
-    { passive: true }
-  );
+  window.addEventListener("mousemove", (e) => {
+    tx = e.clientX; ty = e.clientY;
+    ring.style.opacity = "1";
+  }, { passive: true });
 
-  window.addEventListener("mouseleave", () => {
-    ring.style.opacity = "0";
-  });
+  window.addEventListener("mouseleave", () => { ring.style.opacity = "0"; });
 
-  const interactive =
-    "a, button, .btn, .icon-btn, [role='button'], input, textarea, select, summary, .chip";
+  const interactive = "a, button, .btn, .icon-btn, [role='button'], input, textarea, select, summary, .chip";
   document.addEventListener("pointerover", (e) => {
     if (e.target.closest(interactive)) ring.classList.add("hover");
   });
@@ -157,3 +118,13 @@
   document.addEventListener("mouseup", () => ring.classList.remove("down"));
 })();
 
+(function () {
+  const toggle = document.querySelector(".theme-toggle");
+  if (!toggle) return;
+
+  document.body.classList.remove("light");
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+  });
+})();
