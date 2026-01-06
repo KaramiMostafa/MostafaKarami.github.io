@@ -1,21 +1,26 @@
 // ===== Publication filter by year =====
+// ===== Theme toggle (default dark; remembers choice) =====
 (function () {
-  const list = document.getElementById("pub-list");
-  const buttons = document.querySelectorAll(".pub-filters [data-filter]");
-  if (!list || !buttons.length) return;
+  const toggle = document.querySelector(".theme-toggle");
+  if (!toggle) return;
 
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.setAttribute("aria-selected", "false"));
-      btn.setAttribute("aria-selected", "true");
-      const year = btn.getAttribute("data-filter");
-      list.querySelectorAll(".pub").forEach((item) => {
-        const show = year === "all" || item.getAttribute("data-year") === year;
-        item.style.display = show ? "" : "none";
-      });
-    });
+  const apply = (mode) => {
+    document.body.classList.toggle("light", mode === "light");
+    try { localStorage.setItem("theme", mode); } catch(e) {}
+  };
+
+  // Default = dark unless user previously chose light
+  let saved = null;
+  try { saved = localStorage.getItem("theme"); } catch(e) {}
+  if (saved === "light") apply("light");
+  else apply("dark");
+
+  toggle.addEventListener("click", () => {
+    const isLight = document.body.classList.contains("light");
+    apply(isLight ? "dark" : "light");
   });
 })();
+
 
 // ===== Active section highlighting (left rail + mobile section nav) =====
 (function () {
