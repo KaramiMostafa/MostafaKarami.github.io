@@ -151,3 +151,4 @@
   document.addEventListener("mousedown", () => ring.classList.add("down"));
   document.addEventListener("mouseup", () => ring.classList.remove("down"));
 })();
+
