@@ -21,6 +21,7 @@
   if (!sections.length) return;
 
   const navItems = Array.from(document.querySelectorAll(".side-nav .nav-item[data-section]"));
+  const scroller = document.querySelector(".content");
 
   const setActive = (id) => {
     navItems.forEach((a) => {
@@ -36,8 +37,20 @@
         if (entry.isIntersecting) setActive(entry.target.id);
       });
     },
-    { root: null, rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    { root: scroller, rootMargin: "-45% 0px -45% 0px", threshold: 0 }
   );
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const target = document.getElementById(item.dataset.section);
+      if (!target) return;
+
+      event.preventDefault();
+      const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+      target.scrollIntoView({ behavior, block: "start" });
+      window.history.replaceState(null, "", `#${target.id}`);
+    });
+  });
 
   sections.forEach((s) => obs.observe(s));
 })();
@@ -45,6 +58,7 @@
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
+  const scroller = document.querySelector(".content");
 
   const obs = new IntersectionObserver(
     (entries) => {
@@ -53,7 +67,7 @@
         else entry.target.classList.remove("in-view");
       });
     },
-    { root: null, rootMargin: "0px", threshold: 0.15 }
+    { root: scroller, rootMargin: "0px", threshold: 0.15 }
   );
 
   cards.forEach((card, index) => {
@@ -65,14 +79,21 @@
 
 (function () {
   const btn = document.querySelector(".scroll-top");
-  if (!btn) return;
+  const scroller = document.querySelector(".content");
+  if (!btn || !scroller) return;
 
   const toggle = () => {
-    if (window.scrollY > 250) btn.classList.add("show");
+    if (scroller.scrollTop > 250) btn.classList.add("show");
     else btn.classList.remove("show");
   };
 
-  window.addEventListener("scroll", toggle, { passive: true });
+  scroller.addEventListener("scroll", toggle, { passive: true });
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    scroller.scrollTo({ top: 0, behavior });
+    window.history.replaceState(null, "", window.location.pathname);
+  });
   toggle();
 })();
 
