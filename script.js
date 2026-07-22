@@ -21,7 +21,6 @@
   if (!sections.length) return;
 
   const navItems = Array.from(document.querySelectorAll(".side-nav .nav-item[data-section]"));
-  const scroller = document.querySelector(".content");
 
   const setActive = (id) => {
     navItems.forEach((a) => {
@@ -37,7 +36,7 @@
         if (entry.isIntersecting) setActive(entry.target.id);
       });
     },
-    { root: scroller, rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    { root: null, rootMargin: "-45% 0px -45% 0px", threshold: 0 }
   );
 
   navItems.forEach((item) => {
@@ -58,7 +57,6 @@
 (function () {
   const cards = document.querySelectorAll(".section-card");
   if (!cards.length) return;
-  const scroller = document.querySelector(".content");
 
   const obs = new IntersectionObserver(
     (entries) => {
@@ -67,7 +65,7 @@
         else entry.target.classList.remove("in-view");
       });
     },
-    { root: scroller, rootMargin: "0px", threshold: 0.15 }
+    { root: null, rootMargin: "0px", threshold: 0.15 }
   );
 
   cards.forEach((card, index) => {
@@ -79,20 +77,19 @@
 
 (function () {
   const btn = document.querySelector(".scroll-top");
-  const scroller = document.querySelector(".content");
-  if (!btn || !scroller) return;
+  if (!btn) return;
 
   const toggle = () => {
-    if (scroller.scrollTop > 250) btn.classList.add("show");
+    if (window.scrollY > 250) btn.classList.add("show");
     else btn.classList.remove("show");
   };
 
-  scroller.addEventListener("scroll", toggle, { passive: true });
+  window.addEventListener("scroll", toggle, { passive: true });
   btn.addEventListener("click", (event) => {
     event.preventDefault();
     const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
-    scroller.scrollTo({ top: 0, behavior });
-    window.history.replaceState(null, "", window.location.pathname);
+    window.scrollTo({ top: 0, behavior });
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
   });
   toggle();
 })();
