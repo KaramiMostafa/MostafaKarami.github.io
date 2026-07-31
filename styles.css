@@ -285,7 +285,7 @@ body.light .theme-icon-moon{ display:block; }
 .tagline{
   margin:0 0 10px;
   color:var(--text-dim);
-  font-size:clamp(.85rem,3cqi,1rem);
+  font-size:clamp(.95rem,3cqi,1.1rem);
   line-height:1.4;
 }
 
@@ -293,7 +293,7 @@ body.light .theme-icon-moon{ display:block; }
   list-style:none;
   padding:0;
   margin:0 0 12px;
-  font-size:clamp(.75rem,2.5cqi,.85rem);
+  font-size:clamp(.85rem,2.5cqi,.95rem);
   line-height:1.35;
   color:var(--text-dim);
 }
@@ -366,7 +366,7 @@ body.light .theme-icon-moon{ display:block; }
   min-height:42px;
   margin:0;
   padding:9px 20px;
-  font-size:.9rem;
+  font-size:.95rem;
   line-height:1.15;
   text-align:center;
   white-space:normal;
@@ -391,7 +391,7 @@ body.light .theme-icon-moon{ display:block; }
   height:auto;
   overflow:visible;
   padding:4px 0 36px;
-  font-size:clamp(.78rem,1.3vw,1rem);
+  font-size:clamp(.9rem,1.45vw,1.08rem);
   container-type:inline-size;
   container-name:content;
 }
@@ -427,9 +427,9 @@ section{ scroll-margin-top:24px }
 .facts li{ margin:4px 0 }
 
 .exp-block{ margin-bottom:18px; }
-.exp-meta{ margin:0 0 6px; font-size:.9rem; color:var(--text-dim); }
+.exp-meta{ margin:0 0 6px; font-size:.95rem; color:var(--text-dim); }
 
-.pub-legend{ margin:0 0 10px; font-size:.85rem; color:var(--text-dim); }
+.pub-legend{ margin:0 0 10px; font-size:.95rem; color:var(--text-dim); }
 
 .pub-filters{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 12px }
 
@@ -460,7 +460,7 @@ section{ scroll-margin-top:24px }
   border:1px solid var(--item-border);
   border-radius:10px;
   padding:8px 10px;
-  font-size:.95rem;
+  font-size:1rem;
   color:var(--text);
 }
 
@@ -498,7 +498,7 @@ section{ scroll-margin-top:24px }
 .project-body{ padding:16px 14px 18px; }
 .project-body--wide{ padding:0; }
 
-.project-cite{ margin:10px 0 0 0; font-size:0.92rem; color:var(--text-dim); }
+.project-cite{ margin:10px 0 0 0; font-size:0.98rem; color:var(--text-dim); }
 
 .project-links{ margin:10px 0 0 0; }
 
@@ -653,7 +653,7 @@ body.light #cursor-ring{ mix-blend-mode:multiply; }
   .project--wide{ padding:8px; }
   .project-body{ padding:10px 8px 12px; }
   .project-body--wide{ padding:0; }
-  .pub-list-simple .pub{ padding:7px; font-size:.9em; }
+  .pub-list-simple .pub{ padding:7px; font-size:1em; }
 }
 
 @media (max-width:620px){
